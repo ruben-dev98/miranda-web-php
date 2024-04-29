@@ -1,0 +1,12 @@
+<?php  $this->startComponent('head'); ?>
+<?php echo $this->renderComponent(); ?>
+<body>
+ <?php  $this->startComponent('header'); ?>
+ <?php echo $this->renderComponent(); ?>
+ <?php $this->startSection('content'); ?>
+ <?php $this->stopSection(); ?>
+ <?php  $this->startComponent('footer'); ?>
+ <?php echo $this->renderComponent(); ?>
+ <script src="https://www.youtube.com/iframe_api"></script>
+ <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</body>

@@ -1,3 +1,7 @@
-<?php $title = 'Offers'?>
-<?php require_once('./views/head.blade.php');?>
-<?php require_once('./views/layout.blade.php');?>
+<?php
+    require_once(__DIR__ .'/helpers/renderTemplate.php');
+
+    $templateName = 'layout';
+    $values = ['title' => 'Offers'];
+    renderTemplate($templateName, $values);
+?>

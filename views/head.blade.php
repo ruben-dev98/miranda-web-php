@@ -18,5 +18,5 @@
     <script src="assets/js/swiper.js" defer></script>
     <script src="assets/js/header.js" defer></script>
     <script src="assets/js/menu.js" defer></script>
-    <title><?php echo $title?></title>
+    <title>{{ $title }}</title>
 </head>
