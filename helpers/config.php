@@ -1,3 +1,9 @@
 <?php
-    $conn = new mysqli($_ENV['HOST'], $_ENV['USERNAME'], $_ENV['PASSWORD'], $_ENV['DB_NAME'], $_ENV['SQL_PORT']);
+    $env = parse_ini_file('.env');
+    print_r($env);
+    $conn = new mysqli($env['HOST'], $env['USERNAME'], $env['PASSWORD'], $env['DB_NAME'], $env['SQL_PORT']);
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+    echo "Connected successfully";
 ?>
