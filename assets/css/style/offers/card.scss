@@ -134,8 +134,7 @@
 
     &__amenities {
         margin-bottom: 2em;
-
-        
+        display: flex;
 
         &-list {
             -webkit-columns: 1;

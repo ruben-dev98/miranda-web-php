@@ -2350,6 +2350,7 @@
 }
 .offers__amenities {
   margin-bottom: 2em;
+  display: flex;
 }
 .offers__amenities-list {
   -webkit-columns: 1;
