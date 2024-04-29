@@ -1,3 +1,4 @@
+@extends('layout')
 @section('content')
     <header class="banner">
         <div class="banner__inner --max-width">
@@ -8,7 +9,7 @@
         </div>
     </header>
     <section class="checking">
-        <form class="checking__inner form --max-width" action="room-list.html">
+        <form class="checking__inner form --max-width" action="rooms-list.php">
             <div class="form__control">
                 <div class="form__control-input">
                     <label class="checking__label" for="">Arrival Date</label>

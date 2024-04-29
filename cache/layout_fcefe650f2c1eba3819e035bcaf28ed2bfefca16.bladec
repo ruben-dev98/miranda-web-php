@@ -4,7 +4,7 @@
  <?php  $this->startComponent('header'); ?>
  <?php echo $this->renderComponent(); ?>
  <?php $this->startSection('content'); ?>
- <?php $this->stopSection(); ?>
+ <?php echo $this->yieldSection(); ?>
  <?php  $this->startComponent('footer'); ?>
  <?php echo $this->renderComponent(); ?>
  <script src="https://www.youtube.com/iframe_api"></script>

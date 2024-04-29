@@ -1,11 +1,10 @@
 @component('head')
 @endcomponent
-
 <body>
     @component('header')
     @endcomponent
     @section('content')
-    @endsection
+    @show
     @component('footer')
     @endcomponent
     <script src="https://www.youtube.com/iframe_api"></script>
