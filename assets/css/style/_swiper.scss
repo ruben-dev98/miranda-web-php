@@ -1,0 +1,62 @@
+.swiper-button-next.swiper-button-disabled,
+.swiper-button-prev.swiper-button-disabled {
+    background-color: #f8f8f8;
+    color: $color-main;
+    cursor: auto;
+    pointer-events: none;
+    opacity: 1;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    background-color: $color-secondary;
+    width: 2.25rem;
+    height: 2.25rem;
+    color: $color-light;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+    font-size: 0.8rem;
+}
+
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+    bottom: -2rem;
+    top: auto;
+}
+
+.swiper-pagination-bullet {
+    background: #ededed;
+
+    &--dark {
+        background: #333333;
+    }
+}
+
+.swiper-pagination-bullet-active {
+    background: $color-secondary;
+}
+
+.swiper-slide {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media (min-width: 1000px) {
+    .swiper-button-next:after,
+    .swiper-button-prev:after {
+        font-size: 1.5rem;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        background-color: $color-secondary;
+        width: 4.4rem;
+        height: 4.4rem;
+        color: $color-light;
+    }
+}

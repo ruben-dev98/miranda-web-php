@@ -1,0 +1,144 @@
+.rooms__grid {
+    padding: 2.5em 1.25em;
+    position: relative;
+
+    &-item {
+        margin-bottom: 3em;
+        &-img {
+            display: block;
+            margin: 0 auto;
+            background-color: #c2c2c2;
+            width: 21rem;
+            height: 13.6rem;
+        }
+
+        &-menu {
+            padding: 0.8em 0em;
+            top: -1.3em;
+            width: 16rem;
+        }
+
+        &-details {
+            position: relative;
+            top: -2.5rem;
+            padding-top: 2.5rem;
+            padding-bottom: 2rem;
+            margin: 0 auto;
+            max-width: 21rem;
+            text-align: center;
+
+            background-color: $color-light;
+
+            &-title {
+                font-family: $font-standard;
+                font-size: 1.5rem;
+                line-height: 1.5rem;
+                letter-spacing: -0.06rem;
+                margin-bottom: 0.5em;
+            }
+
+            &-text {
+                width: 90%;
+                margin: 0 auto;
+                color: $text-color-secondary;
+                font-family: $font-roboto;
+                font-size: 0.85rem;
+                font-weight: 400;
+                line-height: 1.5rem;
+                letter-spacing: 0rem;
+                margin-bottom: 1.5em;
+            }
+
+            &-price {
+                span {
+                    font-family: $font-archivo;
+                    font-size: 1rem;
+                    font-weight: 700;
+                    line-height: 1rem;
+                    letter-spacing: 0rem;
+
+                    &:nth-child(1) {
+                        color: $color-secondary;
+                        margin-right: 1em;
+                        margin-left: 1.5em;
+                    }
+
+                    &:nth-child(2) {
+                        a {
+                            color: #bdbdbd;
+                            text-decoration: none;
+                        }
+
+                        a::after {
+                            content: 'Booking Now';
+                        }
+
+                        a:hover::after {
+                            content: 'Book Now';
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &-pagination {
+        margin-bottom: 2em;
+
+        &-items {
+            height: 3.1rem;
+            font-family: "Oswald", sans-serif;
+            font-size: 0.85rem;
+            font-weight: 700;
+            line-height: 1.2rem;
+            letter-spacing: 0px;
+            text-align: center;
+            list-style-type: none;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        &-item {
+            width: 2.5rem;
+            height: 2.5rem;
+            padding: 0.7em 0em;
+
+            &:hover {
+                color: $color-light;
+                background-color: $color-secondary;
+                svg {
+                    path {
+                        fill: $color-light;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.rooms-grid__swiper {
+    width: 100%;
+    height: auto;
+}
+
+@media (min-width: 1000px) {
+    
+    .rooms__grid {
+        margin: 0 auto;
+        padding: 6.5rem 0rem;
+        &-item {
+            &-img {
+                width: 23.1rem;
+                height: 15rem;
+            }
+    
+            &-menu {
+                width: 18.5rem;
+            }
+        }
+
+        .rooms__menu {
+            gap: 0rem;
+        }
+    }
+}

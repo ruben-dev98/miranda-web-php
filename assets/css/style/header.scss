@@ -1,0 +1,233 @@
+.background__header {
+    &-informative-text {
+        display: none;
+    }
+}
+
+.header {
+    padding: 1em;
+    min-width: 360px;
+    max-width: 88.75rem;
+    width: 100%;
+    position: fixed;
+    background-color: $color-light;
+    box-shadow: 0em 0.25em 0.4em 0em #0000004a;
+    z-index: 11;
+
+    &__nav {
+        width: 100%;
+        display: none;
+        position: absolute;
+        bottom: -10.5em;
+        left: 0;
+        background-color: $color-light;
+        box-shadow: 0em 0.3em 0.25em 0em #0000004a;
+        height: 12.35em;
+        z-index: -1;
+
+        ul {
+            padding: 2.75em 1.5em;
+            list-style-type: none;
+            padding-bottom: 0em;
+
+            li {
+                font-family: $font-archivo;
+                font-size: 1rem;
+                font-weight: 600;
+                line-height: 1.2rem;
+                text-decoration: none;
+                
+                &:not(:last-child) {
+                    margin-bottom: 1rem;
+                }
+
+                a {
+                    padding: 0.5em 0em;
+                    text-decoration: none;
+                    color: $color-main;
+                }
+            }
+        }
+    }
+
+    &__link {
+        text-decoration: none;
+        color: $color-main;
+    }
+
+    &__logo {
+        display: inline-block;
+        width: 58%;
+
+        &-img {
+            box-shadow: 0em 0.9em 1.5em 0em #8b8b8b40;
+            width: 2.3em;
+            height: 2.3em;
+            display: inline-block;
+            padding: 0.8em 0.8em;
+            margin-right: 0.5em;
+        }
+
+        &-title {
+            display: inline-block;
+            vertical-align: text-bottom;
+            text-align: left;
+
+            span {
+                display: block;
+                font-family: $font-archivo;
+                line-height: 0.65rem;
+                letter-spacing: 0.08rem;
+                font-size: 0.65rem;
+
+                &:nth-child(1) {
+                    font-weight: 700;
+                }
+
+                &:nth-child(2) {
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+
+    &__icons {
+        display: inline-block;
+        width: 25%;
+        vertical-align: sub;
+        text-align: end;
+
+        &-icon {
+            display: inline-block;
+            width: 1.5em;
+            height: 1.5em;
+
+            &:not(:last-child) {
+                margin-right: 1em;
+            }
+        }
+    }
+
+    &__menu {
+        display: inline-block;
+        cursor: pointer;
+        margin-right: 1.3rem;
+        width: 1.5rem;
+        height: 1.5rem;
+
+        img {
+            display: none;
+        }
+
+        img.--visible {
+            display: inline-block;
+        }
+    }
+}
+
+@media (min-width: 1000px) {
+    .background__header {
+        background: $color-main;
+        height: 5.8em;
+        padding: 0em 1.25em;
+
+        &-informative-text {
+            display: block;
+            max-width: 88.75rem;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0.5em 0em;
+            color: $color-light;
+            font-family: $font-roboto;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.2rem;
+            letter-spacing: 0rem;
+        }
+    }
+
+    .header {
+        margin: 0 auto;
+        padding: 1em 1em;
+        width: 100%;
+        position: relative;
+        background-color: $color-light;
+        box-shadow: 0em 0em 0em 0em;
+
+        &__nav {
+            width: 35%;
+            display: inline-block;
+            position: relative;
+            bottom: 0;
+            box-shadow: 0em 0em 0em 0em;
+            height: fit-content;
+            z-index: 1;
+
+            ul {
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: center;
+                gap: 4em;
+                padding: 0em 0em;
+                padding-bottom: 0em;
+
+                li {
+                    margin-bottom: 1rem;
+                }
+            }
+        }
+
+        &__logo {
+            display: inline-block;
+            width: 30%;
+
+            &-img {
+                width: 5em;
+                height: 5em;
+                vertical-align: middle;
+                margin-right: 1.5em;
+                padding: 1.2em 0em;
+
+                img {
+                    display: block;
+                    margin: 0 auto;
+                    width: 2em;
+                    height: 2.65em;
+                }
+            }
+
+            &-title {
+                vertical-align: middle;
+
+                span {
+                    line-height: 1.75rem;
+                    letter-spacing: 0.15rem;
+                    font-size: 1.75rem;
+                }
+            }
+        }
+
+        &__icons {
+            width: 27%;
+            vertical-align: middle;
+            margin-right: 2em;
+
+            &-icon {
+                border: 0.1em #777 solid;
+                padding: 0.5em;
+                width: 3em;
+                height: 3em;
+                vertical-align: middle;
+
+                &:not(:last-child) {
+                    margin-right: 1em;
+                }
+            }
+        }
+
+        &__menu {
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,25 @@
+.button {
+    cursor: pointer;
+    display: block;
+    width: 15.8em;
+    height: 4.4em;
+    border: 0em;
+    color: $color-light;
+    font-family: $font-archivo;
+    font-size: 0.85em;
+    font-weight: 700;
+    line-height: 1rem;
+    letter-spacing: 0.15rem;
+    background-color: $color-secondary;
+
+    
+
+    &--transparent {
+        background-color: transparent;
+        border: 0.15em solid #ffffff54;
+    }
+
+    &--big {
+        width: 17.5em;
+    }
+}

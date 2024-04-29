@@ -1,0 +1,59 @@
+$font-standard: "Old Standard TT", serif;
+$font-archivo: "Archivo", sans-serif;
+$font-roboto: "Roboto", sans-serif;
+$color-light: #fff;
+$color-main: #111;
+$color-main-alternative: #222;
+$color-secondary: #bead8e;
+$color-terciary: #333;
+$text-color-secondary: #777;
+
+@import "style/swiper";
+@import "style/button";
+@import "style/font";
+@import "style/banner";
+@import "style/header";
+@import "style/footer";
+@import "style/home";
+@import "style/about";
+@import "style/rooms";
+@import "style/rooms-details";
+@import "style/offers";
+@import "style/contact";
+@import "style/rooms-list";
+
+
+html,
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-width: 320px;
+    color: $color-main-alternative;
+}
+
+.upper__case {
+    text-transform: uppercase;
+}
+
+.--max-width {
+    max-width: 74rem;
+}
+
+.--visible {
+    display: inline-block;
+}
+
+.position-fixed {
+    animation-name: fadeIn;
+}
+
+@keyframes fadeIn {
+    to {
+        position: fixed; 
+        margin: 0 auto;
+    }
+}

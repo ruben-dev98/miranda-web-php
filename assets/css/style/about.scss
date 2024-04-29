@@ -1,0 +1,33 @@
+@import "./about/video.scss";
+@import "./about/restaurant.scss";
+@import "./about/counter.scss";
+@import "./about/cards.scss";
+
+.about__facilities {
+    width: 100%;
+    padding-bottom: 5rem;
+    margin-bottom: 3.5em;
+
+    &-inner {
+        margin: 0 auto;
+        position: relative;
+        padding: 0rem 1rem;
+    }
+}
+
+.about__info {
+    padding: 2rem 0rem;
+    margin: 0 auto;
+}
+
+.about__swiper {
+    max-width: 74rem;
+    width: 100%;
+    height: 14.4rem;
+}
+
+@media (min-width: 1000px) {
+    .about__swiper {
+        height: 25rem;
+    }
+}

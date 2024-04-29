@@ -1,0 +1,101 @@
+.about__counter {
+    padding: 0em 1.25em;
+    margin-bottom: 6em;
+    position: relative;
+
+    &-informative-text {
+        color: $text-color-secondary;
+        font-family: $font-archivo;
+        font-size: 0.85rem;
+        font-weight: 700;
+        line-height: 1rem;
+        letter-spacing: 0.15rem;
+        margin-bottom: 1.75em;
+    }
+
+    &-title {
+        font-family: $font-standard;
+        font-size: 3.5rem;
+        font-weight: 400;
+        line-height: 3.75rem;
+        letter-spacing: -0.1rem;
+        margin-bottom: 0.75em;
+    }
+
+    &-card {
+        max-width: 23.1rem;
+        height: 8.25rem;
+        padding: 1rem 1.5rem;
+        padding-right: 0em;
+        margin-bottom: 1rem;
+
+        &-img {
+            width: fit-content;
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 0.5rem;
+        }
+
+        &-text {
+            width: 50%;
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 1.5rem;
+
+            span {
+                font-weight: 400;
+
+                &:nth-of-type(1) {
+                    font-family: $font-standard;
+                    font-size: 3.75rem;
+                    line-height: 3.75rem;
+                    letter-spacing: -0.1rem;
+                }
+
+                &:nth-of-type(2) {
+                    color: $text-color-secondary;
+                    font-family: $font-roboto;
+                    font-size: 1rem;
+                    line-height: 1rem;
+                    letter-spacing: 0rem;
+                }
+            }
+        }
+
+        &-arrow {
+            width: fit-content;
+            display: inline-block;
+            vertical-align: middle;
+            text-align: end;
+        }
+    }
+}
+
+@media (min-width: 1000px) {
+    .about__counter {
+        padding: 0em 1.25em;
+        margin: 0 auto;
+        margin-bottom: 6em;
+        
+        &-title {
+            font-size: 5rem;
+            line-height: 6.25rem;
+            letter-spacing: -0.15rem;
+            text-align: left;
+
+            br {
+                display: none;
+            }
+
+        }
+    
+        &-cards {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &-card {
+            width: 100%;
+        }
+    }
+}

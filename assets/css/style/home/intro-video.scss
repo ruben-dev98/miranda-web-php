@@ -1,0 +1,106 @@
+.intro-video {
+    background-color: $color-main-alternative;
+    padding: 3.5em 1.25em;
+
+    &__informative-text {
+        color: $color-secondary;
+        font-family: $font-archivo;
+        font-size: 0.85rem;
+        font-weight: 700;
+        line-height: 1rem;
+        letter-spacing: 0.2rem;
+        margin-bottom: 1.5em;
+    }
+
+    &__title {
+        color: $color-light;
+        font-family: $font-standard;
+        font-size: 3.5rem;
+        font-weight: 400;
+        line-height: 3.75rem;
+        letter-spacing: -0.1rem;
+        margin-bottom: 0.3em;
+    }
+
+    &__text {
+        padding-right: 1em;
+        color: #c2c2c2;
+        font-family: $font-archivo;
+        font-weight: 400;
+        font-size: 0.85rem;
+        line-height: 1.5rem;
+        margin-bottom: 2em;
+    }
+
+    &__video {
+        background-color: #c2c2c2;
+        width: 80%;
+        height: 80%;
+        margin-bottom: 2em;
+    }
+
+    &__button {
+        font-weight: 400;
+    }
+}
+
+@media (min-width: 1000px) {
+    .intro-video {
+        position: relative;
+        padding: 1.5em 1.25em;
+
+        &__background {
+            position: absolute;
+            width: 30%;
+            height: 43.7em;
+            top: 0;
+            right: 0;
+            left: auto;
+            background-color: $color-secondary;
+            z-index: 1;
+        }
+
+        &__inner {
+            width: 100%;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+            padding: 6em 0em;
+            display: grid;
+            grid-template-columns: 48.5% 3% 48.5%;
+            grid-template-rows: 4rem 12rem 8.7rem 4rem;
+            grid-template-areas:
+                "info . video"
+                "title . video"
+                "text . video"
+                "button . video";
+        }
+
+        &__informative-text {
+            grid-area: info;
+        }
+
+        &__title {
+            grid-area: title;
+            font-size: 5rem;
+            line-height: 5.26rem;
+            letter-spacing: -0.18rem;
+        }
+
+        &__text {
+            grid-area: text;
+            padding-right: 2em;
+        }
+
+        &__video {
+            grid-area: video;
+            width: 100%;
+            height: 100%;
+            margin-bottom: 0em;
+        }
+
+        &__button {
+            grid-area: button;
+        }
+    }
+}

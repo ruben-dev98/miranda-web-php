@@ -1,0 +1,81 @@
+.font {
+    &__title {
+        color: $text-color-secondary;
+        font-family: $font-archivo;
+        font-size: 0.85rem;
+        font-weight: 500;
+        line-height: 1rem;
+        letter-spacing: 0.15rem;
+
+        &--dark {
+            color: $color-light;
+        }
+
+        &--weight-700 {
+            font-weight: 700;
+        }
+    }
+
+    &__subtitle {
+        color: $color-main;
+        font-family: $font-standard;
+        font-size: 3.5rem;
+        font-weight: 400;
+        line-height: 3.7rem;
+        letter-spacing: -0.1rem;
+
+        &--small {
+            font-size: 2.5rem;
+            line-height: 3.1rem;
+        }
+
+        &--dark {
+            color: $color-light;
+        }
+    }
+
+    &__text {
+        color: $text-color-secondary;
+        font-family: $font-archivo;
+        font-weight: 400;
+        font-size: 0.85rem;
+        line-height: 1.5rem;
+        letter-spacing: 0rem;
+    }
+}
+
+
+@media (min-width: 1000px) {
+    .font {
+        &__subtitle {
+            font-size: 5rem;
+            line-height: 5rem;
+            letter-spacing: -0.15rem;
+            margin-bottom: 1em;
+
+            &--banner {
+                font-size: 4.5rem;
+                line-height: 4.5rem;
+                letter-spacing: -0.2rem;
+
+                br {
+                    display: none;
+                }
+            }
+
+            &--banner-home {
+                font-size: 7.5rem;
+                line-height: 8.1rem;
+                letter-spacing: -0.2rem;
+            }
+            
+            &--line-height-90 {
+                line-height: 80.7rem;
+            }
+    
+            &--line-height-100 {
+                line-height: 81.25rem;
+            }
+        }
+    }
+}

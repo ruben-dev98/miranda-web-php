@@ -1,0 +1,106 @@
+.banner {
+    background-color: $color-terciary;
+    padding: 0em 1.25em;
+
+    &__inner {
+        width: 100%;
+        padding-top: 9em;
+        padding-bottom: 5em;
+
+        &--about {
+            padding-bottom: 1em;
+        }
+
+        &--rooms {
+            padding-bottom: 0em;
+        }
+    }
+
+    h2 {
+        margin-bottom: 0.5em;
+    }
+
+    p {
+        width: 95%;
+        margin-bottom: 2em;
+    }
+
+    button {
+        &:not(:last-child) {
+            margin-bottom: 2em;
+        }
+    }
+
+    &__pagination {
+        max-width: 12.5rem;
+        width: 9.75em;
+        background-color: $color-light;
+        margin-right: 0;
+        margin-left: auto;
+        padding: 1em 1em;
+        text-align: center;
+
+        &--room-details {
+            width: 100%;
+        }
+
+        span {
+            font-family: $font-archivo;
+            font-size: 1rem;
+            font-weight: 700;
+            line-height: 1rem;
+            letter-spacing: -0.1rem;
+            color: $color-terciary;
+
+            &:nth-child(3) {
+                color: $color-secondary;
+            }
+
+            &:not(:last-child) {
+                margin-right: 0.5em;
+            }
+        }
+    }
+}
+
+@media (min-width: 1000px) {
+    .banner {
+        &__inner {
+            padding-top: 10em;
+            padding-bottom: 7.5em;
+            width: 100%;
+            margin: 0 auto;
+
+            &--about {
+                padding-bottom: 1em;
+            }
+    
+            &--rooms {
+                padding-bottom: 0em;
+            }
+        }
+
+        h2 {
+            width: 100%;
+            margin-bottom: 0.5em;
+        }
+
+        p {
+            width: 100%;
+        }
+
+        button {
+            display: inline-block;
+
+            &:not(:last-child) {
+                margin-bottom: 0em;
+                margin-right: 2em;
+            }
+        }
+
+        &__pagination {
+            width: 100%;
+            margin-right: 21.3rem;
+        }
+    }
+}

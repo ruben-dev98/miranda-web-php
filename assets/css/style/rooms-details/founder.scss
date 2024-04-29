@@ -1,0 +1,74 @@
+.room-details__founder {
+    padding: 3em 1.25em;
+    text-align: center;
+    margin-bottom: 4em;
+
+    &-img {
+        margin: 0 auto;
+        position: relative;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: #c2c2c2;
+        width: 9.85rem;
+        height: 9.85rem;
+        border-radius: 20rem;
+        margin-bottom: 2em;
+    }
+
+    &-elipsis {
+        right: -7.25rem;
+        position: relative;
+        border: 0.25rem solid $color-light;
+        background-color: $color-secondary;
+        width: 2.85rem;
+        height: 2.85rem;
+        border-radius: 20rem;
+    }
+
+    &-check {
+        padding: 0.75rem 0rem;
+    }
+
+    &-title {
+        font-family: $font-standard;
+        font-size: 1.85rem;
+        font-weight: 400;
+        line-height: 1.85rem;
+        letter-spacing: -0.1rem;
+        margin-bottom: 0.5em;
+    }
+
+    &-subtitle {
+        color: $color-secondary;
+        font-family: $font-archivo;
+        font-size: 0.85rem;
+        font-weight: 700;
+        line-height: 1rem;
+        letter-spacing: 0.18rem;
+        margin-bottom: 1em;
+    }
+
+    &-text {
+        color: $text-color-secondary;
+        font-family: $font-archivo;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5rem;
+        letter-spacing: 0rem;
+    }
+}
+
+
+
+@media (min-width: 1000px) {
+    .room-details__founder {
+        margin: 0em auto 4em auto;
+
+        &-content {
+            padding: 3em 1.25em;
+            width: 370px;
+            box-shadow: 0px 14px 24px 0px #BEAD8E45;
+        }
+    }
+}

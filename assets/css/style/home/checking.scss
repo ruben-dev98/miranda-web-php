@@ -1,0 +1,75 @@
+.checking {
+    background-color: #222222;
+    padding: 2em 1.25em;
+    margin-bottom: 3.5em;
+
+    &__label {
+        margin-bottom: 1.5em;
+        color: $color-light;
+        font-family: $font-roboto;
+        font-weight: 700;
+        font-size: 1rem;
+        display: block;
+    }
+
+    &__input {
+        width: 100%;
+        padding: 0.5em 0em;
+        margin-bottom: 2em;
+        color: #686868;
+        font-family: $font-roboto;
+        font-weight: 400;
+        font-size: 0.85rem;
+        display: block;
+        border: 0em;
+        border-bottom: 0.1em solid $color-secondary;
+        background-color: transparent;
+
+        &::-webkit-calendar-picker-indicator::after {
+            color: $color-secondary;
+            text-align: left;
+        }
+    }
+
+    &__button {
+        width: 17.5em;
+        height: 4.4em;
+        color: $color-light;
+        font-family: $font-archivo;
+        font-weight: 700;
+        font-size: 0.85rem;
+        background-color: $color-secondary;
+        display: block;
+        line-height: 1rem;
+        letter-spacing: 0.15rem;
+        border: 0em;
+    }
+}
+
+@media (min-width: 1000px) {
+    .checking {
+        &__inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 2em;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .form {
+            &__control {
+                width: 50%;
+
+                &-input {
+                    width: 45%;
+                    display: inline-block;
+
+                    &:last-child {
+                        margin-left: 5%;
+                    }
+                }
+            }
+        }
+    }
+}
