@@ -164,13 +164,13 @@
     </section>
     <section class="offers__popular-rooms offers__popular-rooms--ligth room-details__related-rooms --max-width">
         <p class="offers__popular-rooms-title offers__popular-rooms-title--related-rooms">Related Rooms</p>
-        <div class="offers__swiper swiper">
+        <div class="offers__swiper swiper --max-width">
             <!-- Additional required wrapper -->
             <div class="offers__swiper-wrapper swiper-wrapper">
                 <!-- Slides -->
-                <div class="offers__swiper-slide rooms__list-item swiper-slide">
+                <div class="offers__swiper-slide rooms__grid-item swiper-slide">
                     <img src="assets/img/luxury-room-3.jpg" alt="">
-                    <menu class="rooms__list-item-menu rooms__menu offers__menu">
+                    <menu class="rooms__grid-item-menu rooms__menu offers__menu">
                         <span class="rooms__menu-item">
                             <img src="assets/icon/bed.svg" alt="icono de una cama">
                         </span>
@@ -193,20 +193,20 @@
                             <img src="assets/icon/cocktail.svg" alt="icono de un coctel">
                         </span>
                     </menu>
-                    <div class="rooms__list-item-details offers__details">
-                        <p class="rooms__list-item-details-title">Minimal Duplex Room</p>
-                        <p class="rooms__list-item-details-text">
+                    <div class="rooms__grid-item-details offers__details">
+                        <p class="rooms__grid-item-details-title">Minimal Duplex Room</p>
+                        <p class="rooms__grid-item-details-text">
                             Lorem ipsum dolor sit amet,
                             consectetur adipi sicing elit, sed do eiusmod tempor.
                         </p>
-                        <p class="rooms__list-item-details-price">
+                        <p class="rooms__grid-item-details-price">
                             <span>$345/Night</span><span><a href="room-details.html"></a></span>
                         </p>
                     </div>
                 </div>
-                <div class="offers__swiper-slide rooms__list-item swiper-slide">
+                <div class="offers__swiper-slide rooms__grid-item swiper-slide">
                     <img src="assets/img/luxury-room-2.jpg" alt="">
-                    <menu class="rooms__list-item-menu rooms__menu offers__menu">
+                    <menu class="rooms__grid-item-menu rooms__menu offers__menu">
                         <span class="rooms__menu-item">
                             <img src="assets/icon/bed.svg" alt="icono de una cama">
                         </span>
@@ -229,20 +229,20 @@
                             <img src="assets/icon/cocktail.svg" alt="icono de un coctel">
                         </span>
                     </menu>
-                    <div class="rooms__list-item-details offers__details">
-                        <p class="rooms__list-item-details-title">Minimal Duplex Room</p>
-                        <p class="rooms__list-item-details-text">
+                    <div class="rooms__grid-item-details offers__details">
+                        <p class="rooms__grid-item-details-title">Minimal Duplex Room</p>
+                        <p class="rooms__grid-item-details-text">
                             Lorem ipsum dolor sit amet,
                             consectetur adipi sicing elit, sed do eiusmod tempor.
                         </p>
-                        <p class="rooms__list-item-details-price">
+                        <p class="rooms__grid-item-details-price">
                             <span>$345/Night</span><span><a href="room-details.html"></a></span>
                         </p>
                     </div>
                 </div>
-                <div class="offers__swiper-slide rooms__list-item swiper-slide">
+                <div class="offers__swiper-slide rooms__grid-item swiper-slide">
                     <img src="assets/img/luxury-room.jpg" alt="">
-                    <menu class="rooms__list-item-menu rooms__menu offers__menu">
+                    <menu class="rooms__grid-item-menu rooms__menu offers__menu">
                         <span class="rooms__menu-item">
                             <img src="assets/icon/bed.svg" alt="icono de una cama">
                         </span>
@@ -265,13 +265,13 @@
                             <img src="assets/icon/cocktail.svg" alt="icono de un coctel">
                         </span>
                     </menu>
-                    <div class="rooms__list-item-details offers__details">
-                        <p class="rooms__list-item-details-title">Minimal Duplex Room</p>
-                        <p class="rooms__list-item-details-text">
+                    <div class="rooms__grid-item-details offers__details">
+                        <p class="rooms__grid-item-details-title">Minimal Duplex Room</p>
+                        <p class="rooms__grid-item-details-text">
                             Lorem ipsum dolor sit amet,
                             consectetur adipi sicing elit, sed do eiusmod tempor.
                         </p>
-                        <p class="rooms__list-item-details-price">
+                        <p class="rooms__grid-item-details-price">
                             <span>$345/Night</span><span><a href="room-details.html"></a></span>
                         </p>
                     </div>

@@ -51,7 +51,7 @@
                                 </p>
                             </div>
                             <p class="rooms__list-item-details-price">
-                                <span>$345/Night</span><span><a href="room-details.html"></a></span>
+                                <span>$345/Night</span><span><a href="room-details.php"></a></span>
                             </p>
                         </div>
                     </div>
@@ -93,7 +93,7 @@
                                 </p>
                             </div>
                             <p class="rooms__list-item-details-price">
-                                <span>$345/Night</span><span><a href="room-details.html"></a></span>
+                                <span>$345/Night</span><span><a href="room-details.php"></a></span>
                             </p>
                         </div>
                     </div>
@@ -135,7 +135,7 @@
                                 </p>
                             </div>
                             <p class="rooms__list-item-details-price">
-                                <span>$345/Night</span><span><a href="room-details.html"></a></span>
+                                <span>$345/Night</span><span><a href="room-details.php"></a></span>
                             </p>
                         </div>
                     </div>
@@ -177,7 +177,7 @@
                                 </p>
                             </div>
                             <p class="rooms__list-item-details-price">
-                                <span>$345/Night</span><span><a href="room-details.html"></a></span>
+                                <span>$345/Night</span><span><a href="room-details.php"></a></span>
                             </p>
                         </div>
                     </div>
@@ -219,7 +219,7 @@
                                 </p>
                             </div>
                             <p class="rooms__list-item-details-price">
-                                <span>$345/Night</span><span><a href="room-details.html"></a></span>
+                                <span>$345/Night</span><span><a href="room-details.php"></a></span>
                             </p>
                         </div>
                     </div>
@@ -261,7 +261,7 @@
                                 </p>
                             </div>
                             <p class="rooms__list-item-details-price">
-                                <span>$345/Night</span><span><a href="room-details.html"></a></span>
+                                <span>$345/Night</span><span><a href="room-details.php"></a></span>
                             </p>
                         </div>
                     </div>

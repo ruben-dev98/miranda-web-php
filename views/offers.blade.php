@@ -11,12 +11,12 @@
     </header>
     <section class="offers offers__cards --max-width">
         <div class="offers__card">
-            <a href="room-details.html"><img class="offers__img" src="assets/img/luxury-room.jpg" alt=""></a>
+            <a href="room-details.php"><img class="offers__img" src="assets/img/luxury-room.jpg" alt=""></a>
             <div class="offers__inner">
                 <header class="offers__card-header">
                     <div>
                         <p class="offers__informative-text upper__case">Double Bed</p>
-                        <p class="offers__title"><a href="room-details.html">Luxury Double Bed</a></p>
+                        <p class="offers__title"><a href="room-details.php">Luxury Double Bed</a></p>
                     </div>
                     <div class="offers__prices">
                         <p class="offers__price offers__price--crossed">
@@ -93,18 +93,18 @@
                             </li>
                         </ul>
                     </section>
-                    <button class="offers__button upper__case"><a href="room-details.html">Book Now</a></button>
+                    <button class="offers__button upper__case"><a href="room-details.php">Book Now</a></button>
                 </div>
 
             </div>
         </div>
         <div class="offers__card">
-            <a href="room-details.html"><img class="offers__img" src="assets/img/luxury-room.jpg" alt=""></a>
+            <a href="room-details.php"><img class="offers__img" src="assets/img/luxury-room.jpg" alt=""></a>
             <div class="offers__inner">
                 <header class="offers__card-header">
                     <div>
                         <p class="offers__informative-text upper__case">Double Bed</p>
-                        <p class="offers__title"><a href="room-details.html">Luxury Double Bed</a></p>
+                        <p class="offers__title"><a href="room-details.php">Luxury Double Bed</a></p>
                     </div>
                     <div class="offers__prices">
                         <p class="offers__price offers__price--crossed">
@@ -181,18 +181,18 @@
                             </li>
                         </ul>
                     </section>
-                    <button class="offers__button upper__case"><a href="room-details.html">Book Now</a></button>
+                    <button class="offers__button upper__case"><a href="room-details.php">Book Now</a></button>
                 </div>
 
             </div>
         </div>
         <div class="offers__card">
-            <a href="room-details.html"><img class="offers__img" src="assets/img/luxury-room.jpg" alt=""></a>
+            <a href="room-details.php"><img class="offers__img" src="assets/img/luxury-room.jpg" alt=""></a>
             <div class="offers__inner">
                 <header class="offers__card-header">
                     <div>
                         <p class="offers__informative-text upper__case">Double Bed</p>
-                        <p class="offers__title"><a href="room-details.html">Luxury Double Bed</a></p>
+                        <p class="offers__title"><a href="room-details.php">Luxury Double Bed</a></p>
                     </div>
                     <div class="offers__prices">
                         <p class="offers__price offers__price--crossed">
@@ -269,18 +269,18 @@
                             </li>
                         </ul>
                     </section>
-                    <button class="offers__button upper__case"><a href="room-details.html">Book Now</a></button>
+                    <button class="offers__button upper__case"><a href="room-details.php">Book Now</a></button>
                 </div>
 
             </div>
         </div>
         <div class="offers__card">
-            <a href="room-details.html"><img class="offers__img" src="assets/img/luxury-room.jpg" alt=""></a>
+            <a href="room-details.php"><img class="offers__img" src="assets/img/luxury-room.jpg" alt=""></a>
             <div class="offers__inner">
                 <header class="offers__card-header">
                     <div>
                         <p class="offers__informative-text upper__case">Double Bed</p>
-                        <p class="offers__title"><a href="room-details.html">Luxury Double Bed</a></p>
+                        <p class="offers__title"><a href="room-details.php">Luxury Double Bed</a></p>
                     </div>
                     <div class="offers__prices">
                         <p class="offers__price offers__price--crossed">
@@ -357,7 +357,7 @@
                             </li>
                         </ul>
                     </section>
-                    <button class="offers__button upper__case"><a href="room-details.html">Book Now</a></button>
+                    <button class="offers__button upper__case"><a href="room-details.php">Book Now</a></button>
                 </div>
 
             </div>
@@ -402,7 +402,7 @@
                             consectetur adipi sicing elit, sed do eiusmod tempor.
                         </p>
                         <p class="rooms__grid-item-details-price">
-                            <span>$345/Night</span><span><a href="room-details.html"></a></span>
+                            <span>$345/Night</span><span><a href="room-details.php"></a></span>
                         </p>
                     </div>
                 </div>
@@ -438,7 +438,7 @@
                             consectetur adipi sicing elit, sed do eiusmod tempor.
                         </p>
                         <p class="rooms__grid-item-details-price">
-                            <span>$345/Night</span><span><a href="room-details.html"></a></span>
+                            <span>$345/Night</span><span><a href="room-details.php"></a></span>
                         </p>
                     </div>
                 </div>
@@ -474,7 +474,7 @@
                             consectetur adipi sicing elit, sed do eiusmod tempor.
                         </p>
                         <p class="rooms__grid-item-details-price">
-                            <span>$345/Night</span><span><a href="room-details.html"></a></span>
+                            <span>$345/Night</span><span><a href="room-details.php"></a></span>
                         </p>
                     </div>
                 </div>

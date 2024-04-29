@@ -47,7 +47,7 @@
                                 consectetur adipi sicing elit, sed do eiusmod tempor.
                             </p>
                             <p class="rooms__grid-item-details-price">
-                                <span>$345/Night</span><span><a href="room-details.html"></a></span>
+                                <span>$345/Night</span><span><a href="room-details.php"></a></span>
                             </p>
                         </div>
                     </div>
@@ -85,7 +85,7 @@
                                 consectetur adipi sicing elit, sed do eiusmod tempor.
                             </p>
                             <p class="rooms__grid-item-details-price">
-                                <span>$345/Night</span><span><a href="room-details.html"></a></span>
+                                <span>$345/Night</span><span><a href="room-details.php"></a></span>
                             </p>
                         </div>
                     </div>
@@ -123,7 +123,7 @@
                                 consectetur adipi sicing elit, sed do eiusmod tempor.
                             </p>
                             <p class="rooms__grid-item-details-price">
-                                <span>$345/Night</span><span><a href="room-details.html"></a></span>
+                                <span>$345/Night</span><span><a href="room-details.php"></a></span>
                             </p>
                         </div>
                     </div>
@@ -161,7 +161,7 @@
                                 consectetur adipi sicing elit, sed do eiusmod tempor.
                             </p>
                             <p class="rooms__grid-item-details-price">
-                                <span>$345/Night</span><span><a href="room-details.html"></a></span>
+                                <span>$345/Night</span><span><a href="room-details.php"></a></span>
                             </p>
                         </div>
                     </div>
@@ -199,7 +199,7 @@
                                 consectetur adipi sicing elit, sed do eiusmod tempor.
                             </p>
                             <p class="rooms__grid-item-details-price">
-                                <span>$345/Night</span><span><a href="room-details.html"></a></span>
+                                <span>$345/Night</span><span><a href="room-details.php"></a></span>
                             </p>
                         </div>
                     </div>
@@ -237,7 +237,7 @@
                                 consectetur adipi sicing elit, sed do eiusmod tempor.
                             </p>
                             <p class="rooms__grid-item-details-price">
-                                <span>$345/Night</span><span><a href="room-details.html"></a></span>
+                                <span>$345/Night</span><span><a href="room-details.php"></a></span>
                             </p>
                         </div>
                     </div>
@@ -275,7 +275,7 @@
                                 consectetur adipi sicing elit, sed do eiusmod tempor.
                             </p>
                             <p class="rooms__grid-item-details-price">
-                                <span>$345/Night</span><span><a href="room-details.html"></a></span>
+                                <span>$345/Night</span><span><a href="room-details.php"></a></span>
                             </p>
                         </div>
                     </div>
@@ -313,7 +313,7 @@
                                 consectetur adipi sicing elit, sed do eiusmod tempor.
                             </p>
                             <p class="rooms__grid-item-details-price">
-                                <span>$345/Night</span><span><a href="room-details.html"></a></span>
+                                <span>$345/Night</span><span><a href="room-details.php"></a></span>
                             </p>
                         </div>
                     </div>
@@ -351,7 +351,7 @@
                                 consectetur adipi sicing elit, sed do eiusmod tempor.
                             </p>
                             <p class="rooms__grid-item-details-price">
-                                <span>$345/Night</span><span><a href="room-details.html"></a></span>
+                                <span>$345/Night</span><span><a href="room-details.php"></a></span>
                             </p>
                         </div>
                     </div>
@@ -389,7 +389,7 @@
                                 consectetur adipi sicing elit, sed do eiusmod tempor.
                             </p>
                             <p class="rooms__grid-item-details-price">
-                                <span>$345/Night</span><span><a href="room-details.html"></a></span>
+                                <span>$345/Night</span><span><a href="room-details.php"></a></span>
                             </p>
                         </div>
                     </div>
@@ -427,7 +427,7 @@
                                 consectetur adipi sicing elit, sed do eiusmod tempor.
                             </p>
                             <p class="rooms__grid-item-details-price">
-                                <span>$345/Night</span><span><a href="room-details.html"></a></span>
+                                <span>$345/Night</span><span><a href="room-details.php"></a></span>
                             </p>
                         </div>
                     </div>
@@ -465,7 +465,7 @@
                                 consectetur adipi sicing elit, sed do eiusmod tempor.
                             </p>
                             <p class="rooms__grid-item-details-price">
-                                <span>$345/Night</span><span><a href="room-details.html"></a></span>
+                                <span>$345/Night</span><span><a href="room-details.php"></a></span>
                             </p>
                         </div>
                     </div>
