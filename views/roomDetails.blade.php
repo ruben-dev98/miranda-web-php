@@ -1,5 +1,5 @@
 @extends('layout')
-@section('content')
+{{-- @section('content')
     <header class="banner">
         <div class="banner__inner banner__inner--rooms --max-width">
             <p class="font__title font__title--dark upper__case">The Ultimate Luxury</p>
@@ -165,121 +165,48 @@
     <section class="offers__popular-rooms offers__popular-rooms--ligth room-details__related-rooms --max-width">
         <p class="offers__popular-rooms-title offers__popular-rooms-title--related-rooms">Related Rooms</p>
         <div class="offers__swiper swiper --max-width">
-            <!-- Additional required wrapper -->
             <div class="offers__swiper-wrapper swiper-wrapper">
-                <!-- Slides -->
-                <div class="offers__swiper-slide rooms__grid-item swiper-slide">
-                    <img src="assets/img/luxury-room-3.jpg" alt="">
-                    <menu class="rooms__grid-item-menu rooms__menu offers__menu">
-                        <span class="rooms__menu-item">
-                            <img src="assets/icon/bed.svg" alt="icono de una cama">
-                        </span>
-                        <span class="rooms__menu-item">
-                            <img src="assets/icon/wifi.svg" alt="icono de conexión wifi">
-                        </span>
-                        <span class="rooms__menu-item">
-                            <img src="assets/icon/car.svg" alt="icono de un coche">
-                        </span>
-                        <span class="rooms__menu-item">
-                            <img src="assets/icon/snowflake.svg" alt="icono de un copo de nieve">
-                        </span>
-                        <span class="rooms__menu-item">
-                            <img src="assets/icon/gym.svg" alt="icono de una mancuerna">
-                        </span>
-                        <span class="rooms__menu-item">
-                            <img src="assets/icon/no-smoking.svg" alt="icono de prohibido fumar">
-                        </span>
-                        <span class="rooms__menu-item">
-                            <img src="assets/icon/cocktail.svg" alt="icono de un coctel">
-                        </span>
-                    </menu>
-                    <div class="rooms__grid-item-details offers__details">
-                        <p class="rooms__grid-item-details-title">Minimal Duplex Room</p>
-                        <p class="rooms__grid-item-details-text">
-                            Lorem ipsum dolor sit amet,
-                            consectetur adipi sicing elit, sed do eiusmod tempor.
-                        </p>
-                        <p class="rooms__grid-item-details-price">
-                            <span>$345/Night</span><span><a href="room-details.html"></a></span>
-                        </p>
+                @foreach ($rooms as $room)
+                    <div class="offers__swiper-slide rooms__grid-item swiper-slide">
+                        <img src="{{ json_decode($room['photo'])[0] }}" alt="">
+                        <menu class="rooms__grid-item-menu rooms__menu offers__menu">
+                            <span class="rooms__menu-item">
+                                <img src="assets/icon/bed.svg" alt="icono de una cama">
+                            </span>
+                            <span class="rooms__menu-item">
+                                <img src="assets/icon/wifi.svg" alt="icono de conexión wifi">
+                            </span>
+                            <span class="rooms__menu-item">
+                                <img src="assets/icon/car.svg" alt="icono de un coche">
+                            </span>
+                            <span class="rooms__menu-item">
+                                <img src="assets/icon/snowflake.svg" alt="icono de un copo de nieve">
+                            </span>
+                            <span class="rooms__menu-item">
+                                <img src="assets/icon/gym.svg" alt="icono de una mancuerna">
+                            </span>
+                            <span class="rooms__menu-item">
+                                <img src="assets/icon/no-smoking.svg" alt="icono de prohibido fumar">
+                            </span>
+                            <span class="rooms__menu-item">
+                                <img src="assets/icon/cocktail.svg" alt="icono de un coctel">
+                            </span>
+                        </menu>
+                        <div class="rooms__grid-item-details offers__details">
+                            <p class="rooms__grid-item-details-title">{{ $room['type'] }} - {{ $room['number'] }}</p>
+                            <p class="rooms__grid-item-details-text">
+                                {{ $room['description'] }}
+                            </p>
+                            <p class="rooms__grid-item-details-price">
+                                <span>${{ calculateDiscount($room['price'], $room['discount']) }}/Night</span><span><a
+                                        href="room-details.php/?id={{ $room['_id'] }}"></a></span>
+                            </p>
+                        </div>
                     </div>
-                </div>
-                <div class="offers__swiper-slide rooms__grid-item swiper-slide">
-                    <img src="assets/img/luxury-room-2.jpg" alt="">
-                    <menu class="rooms__grid-item-menu rooms__menu offers__menu">
-                        <span class="rooms__menu-item">
-                            <img src="assets/icon/bed.svg" alt="icono de una cama">
-                        </span>
-                        <span class="rooms__menu-item">
-                            <img src="assets/icon/wifi.svg" alt="icono de conexión wifi">
-                        </span>
-                        <span class="rooms__menu-item">
-                            <img src="assets/icon/car.svg" alt="icono de un coche">
-                        </span>
-                        <span class="rooms__menu-item">
-                            <img src="assets/icon/snowflake.svg" alt="icono de un copo de nieve">
-                        </span>
-                        <span class="rooms__menu-item">
-                            <img src="assets/icon/gym.svg" alt="icono de una mancuerna">
-                        </span>
-                        <span class="rooms__menu-item">
-                            <img src="assets/icon/no-smoking.svg" alt="icono de prohibido fumar">
-                        </span>
-                        <span class="rooms__menu-item">
-                            <img src="assets/icon/cocktail.svg" alt="icono de un coctel">
-                        </span>
-                    </menu>
-                    <div class="rooms__grid-item-details offers__details">
-                        <p class="rooms__grid-item-details-title">Minimal Duplex Room</p>
-                        <p class="rooms__grid-item-details-text">
-                            Lorem ipsum dolor sit amet,
-                            consectetur adipi sicing elit, sed do eiusmod tempor.
-                        </p>
-                        <p class="rooms__grid-item-details-price">
-                            <span>$345/Night</span><span><a href="room-details.html"></a></span>
-                        </p>
-                    </div>
-                </div>
-                <div class="offers__swiper-slide rooms__grid-item swiper-slide">
-                    <img src="assets/img/luxury-room.jpg" alt="">
-                    <menu class="rooms__grid-item-menu rooms__menu offers__menu">
-                        <span class="rooms__menu-item">
-                            <img src="assets/icon/bed.svg" alt="icono de una cama">
-                        </span>
-                        <span class="rooms__menu-item">
-                            <img src="assets/icon/wifi.svg" alt="icono de conexión wifi">
-                        </span>
-                        <span class="rooms__menu-item">
-                            <img src="assets/icon/car.svg" alt="icono de un coche">
-                        </span>
-                        <span class="rooms__menu-item">
-                            <img src="assets/icon/snowflake.svg" alt="icono de un copo de nieve">
-                        </span>
-                        <span class="rooms__menu-item">
-                            <img src="assets/icon/gym.svg" alt="icono de una mancuerna">
-                        </span>
-                        <span class="rooms__menu-item">
-                            <img src="assets/icon/no-smoking.svg" alt="icono de prohibido fumar">
-                        </span>
-                        <span class="rooms__menu-item">
-                            <img src="assets/icon/cocktail.svg" alt="icono de un coctel">
-                        </span>
-                    </menu>
-                    <div class="rooms__grid-item-details offers__details">
-                        <p class="rooms__grid-item-details-title">Minimal Duplex Room</p>
-                        <p class="rooms__grid-item-details-text">
-                            Lorem ipsum dolor sit amet,
-                            consectetur adipi sicing elit, sed do eiusmod tempor.
-                        </p>
-                        <p class="rooms__grid-item-details-price">
-                            <span>$345/Night</span><span><a href="room-details.html"></a></span>
-                        </p>
-                    </div>
-                </div>
+                @endforeach
             </div>
-            <!-- If we need navigation buttons -->
             <div class="offers__swiper-button-prev swiper-button-prev"></div>
             <div class="offers__swiper-button-next swiper-button-next"></div>
         </div>
     </section>
-@endsection
+@endsection --}}

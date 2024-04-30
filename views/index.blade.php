@@ -86,31 +86,26 @@
             </span>
         </menu>
         <div class="rooms__swiper swiper">
-            <!-- Additional required wrapper -->
             <div class="rooms__swiper-wrapper swiper-wrapper">
-                <!-- Slides -->
-                <div class="rooms__swiper-slide swiper-slide" style="background-image: url(assets/img/luxury-room.jpg);">
-                </div>
-                <div class="rooms__swiper-slide swiper-slide" style="background-image: url(assets/img/luxury-room-3.jpg);">
-                </div>
-                <div class="rooms__swiper-slide swiper-slide" style="background-image: url(assets/img/luxury-room-2.jpg);">
-                </div>
+                @foreach ($rooms as $room)
+                    <div class="rooms__swiper-slide swiper-slide"
+                        style='background-image: url({{ json_decode($room['photo'])[0] }});'>
+                    </div>
+                @endforeach
             </div>
-            <!-- If we need navigation buttons -->
             <div class="rooms__swiper-button-prev swiper-button-prev"></div>
             <div class="rooms__swiper-button-next swiper-button-next"></div>
         </div>
         <div class="rooms__details">
             <div class="rooms__details-info">
-                <p class="rooms__details-title">Minimal Duplex Room</p>
+                <p class="rooms__details-title">{{ $room['type'] }} - {{ $room['number'] }}</p>
                 <p class="rooms__details-text">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                    sed do eiusmod tempor incididunt ut labore et dolore.
+                    {{ $room['description'] }}
                 </p>
             </div>
             <p class="rooms__details-price">
                 <span>$</span>
-                <span>345</span>
+                <span>{{calculateDiscount($room['price'], $room['discount']) }}</span>
                 <span>/Night</span>
             </p>
         </div>

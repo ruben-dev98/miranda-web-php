@@ -1504,6 +1504,13 @@
     color: #999999;
   }
 }
+.rooms__swiper-wrapper .rooms__menu {
+  top: -2em;
+}
+.rooms__swiper-wrapper .rooms__details {
+  top: 4em;
+}
+
 .about__video {
   padding: 2.5em 1.25em;
   margin-bottom: 2rem;
