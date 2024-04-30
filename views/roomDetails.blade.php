@@ -1,5 +1,5 @@
 @extends('layout')
-{{-- @section('content')
+@section('content')
     <header class="banner">
         <div class="banner__inner banner__inner--rooms --max-width">
             <p class="font__title font__title--dark upper__case">The Ultimate Luxury</p>
@@ -209,4 +209,4 @@
             <div class="offers__swiper-button-next swiper-button-next"></div>
         </div>
     </section>
-@endsection --}}
+@endsection
