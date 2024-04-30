@@ -12,13 +12,13 @@ class Connection extends mysqli {
         return $row;
     }
 
-    public static function selectWithParams($conn, $query, $params) {
+    public static function selectCheckAvailability($conn, $query, $params) {
         $stmt = $conn->prepare($query);
-        foreach($params as $key => $value) {
-            $stmt->bind_param($value);
-        }
-
-        $row = $stmt->execute();
+        $stmt->bind_param('ss', $params['check_in'], $params['check_out']);
+        $stmt->execute();
+        
+        $result = $stmt->get_result();
+        $row = $result->fetch_all(MYSQLI_ASSOC);
         return $row;
     }
 
