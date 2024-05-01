@@ -18,5 +18,6 @@
     <script src="assets/js/swiper.js" defer></script>
     <script src="assets/js/header.js" defer></script>
     <script src="assets/js/menu.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
     <title>{{ $title }}</title>
 </head>

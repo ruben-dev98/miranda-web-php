@@ -2,7 +2,6 @@
 <html lang="es">
 @component('head')
 @endcomponent
-
 <body>
     @component('header')
     @endcomponent

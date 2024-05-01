@@ -48,7 +48,7 @@
                 <label for="">Phone</label>
                 <input type="text" id="phone" name="phone">
             </div>
-            <button class="button upper__case">Check Availability</button>
+            <button class="button upper__case" type="submit">Check Availability</button>
         </form>
         <p class="room-details__text">
             {{ $room['description'] }}
@@ -58,11 +58,13 @@
         <p class="room-details__amenities-title">Amenities</p>
         <ul class="room-details__amenities-list">
             @foreach(json_decode($room['amenities']) as $amenity)
-                <li class="room-details__amenities-list-item">
-                    <img class="room-details__amenities-list-item-img" src="assets/icon/amenities-air-conditioner.svg"
-                        alt="">
-                    <span class="room-details__amenities-list-item-text">{{ $amenity }}</span>
-                </li>
+                @if($amenity !== null)
+                    <li class="room-details__amenities-list-item">
+                        <img class="room-details__amenities-list-item-img" src="assets/icon/amenities-air-conditioner.svg"
+                            alt="">
+                        <span class="room-details__amenities-list-item-text">{{ $amenity }}</span>
+                    </li>
+                @endif
             @endforeach
         </ul>
     </section>

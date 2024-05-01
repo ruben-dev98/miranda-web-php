@@ -50,31 +50,31 @@
             style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </section>
     <section class="contact__form --max-width">
-        <form action="">
+        <form method="POST">
             <div class="contact__form-control">
                 <img class="contact__form-control-img contact__form-control-img--full-name"
                     src="assets/icon/contact-full-name.svg" alt="">
-                <input class="contact__input" placeholder="Your full name" type="text">
+                <input class="contact__input" placeholder="Your full name" type="text" name="full_name" id="full_name">
             </div>
             <div class="contact__form-control">
                 <img class="contact__form-control-img" src="assets/icon/contact-phone.svg" alt="">
-                <input class="contact__input" placeholder="Add phone number" type="text">
+                <input class="contact__input" placeholder="Add phone number" type="text" name="phone" id="phone">
             </div>
             <div class="contact__form-control">
                 <img class="contact__form-control-img" src="assets/icon/contact-email.svg" alt="">
-                <input class="contact__input" placeholder="Enter email address" type="text">
+                <input class="contact__input" placeholder="Enter email address" type="text" name="email" id="email">
             </div>
             <div class="contact__form-control">
                 <img class="contact__form-control-img" src="assets/icon/contact-subject.svg" alt="">
-                <input class="contact__input" placeholder="Enter subject" type="text">
+                <input class="contact__input" placeholder="Enter subject" type="text" name="subject" id="subject">
             </div>
             <div class="contact__form-control contact__form-control--area">
                 <img class="contact__form-control-img contact__form-control-img--area" src="assets/icon/contact-message.svg"
                     alt="">
-                <textarea class="contact__area" name="" placeholder="Enter message" id="" cols="30" rows="10"></textarea>
+                <textarea class="contact__area" name="" placeholder="Enter message" id="" cols="30" rows="10" name="message" id="message"></textarea>
             </div>
             <div class="contact__form-button">
-                <button class="button contact__button upper__case">Send</button>
+                <button class="button contact__button upper__case" type="submit">Send</button>
             </div>
         </form>
     </section>

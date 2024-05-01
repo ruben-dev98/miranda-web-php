@@ -5,6 +5,6 @@
     }
 
     function formatNumber($number) {
-        
+        strval($number);
     }
 ?>

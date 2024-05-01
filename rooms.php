@@ -2,7 +2,7 @@
     require_once(__DIR__ .'/helpers/renderTemplate.php');
     require_once(__DIR__ .'/helpers/config.php');
 
-    $rooms = Connection::select($conn, $queryRoomsCheckAvailabilityWithoutDates);
+    $rooms = Connection::select($conn, $queryAllRooms);
     $conn->close();
 
     $templateName = 'rooms';
