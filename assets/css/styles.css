@@ -1852,23 +1852,18 @@
 .rooms__grid-pagination {
   margin-bottom: 2em;
 }
-.rooms__grid-pagination-items {
-  height: 3.1rem;
-  font-family: "Oswald", sans-serif;
-  font-size: 0.85rem;
-  font-weight: 700;
-  line-height: 1.2rem;
-  letter-spacing: 0px;
-  text-align: center;
-  list-style-type: none;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
 .rooms__grid-pagination-item {
   width: 2.5rem;
   height: 2.5rem;
   padding: 0.7em 0em;
+  background-color: transparent;
+  color: #111;
+  opacity: 1;
+  border-radius: 0;
+}
+.rooms__grid-pagination-item.swiper-pagination-bullet-active {
+  color: #fff;
+  background-color: #bead8e;
 }
 .rooms__grid-pagination-item:hover {
   color: #fff;
@@ -1881,6 +1876,19 @@
 .rooms-grid__swiper {
   width: 100%;
   height: auto;
+}
+
+.rooms-grid__swiper-pagination {
+  height: 3.1rem;
+  font-family: "Oswald", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.2rem;
+  letter-spacing: 0px;
+  text-align: center;
+}
+.rooms-grid__swiper-pagination.swiper-pagination-bullets.swiper-pagination-horizontal {
+  bottom: 3rem;
 }
 
 @media (min-width: 1000px) {
