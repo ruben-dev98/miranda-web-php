@@ -22,5 +22,13 @@ class Connection extends mysqli {
         return $row;
     }
 
-
+    public static function selectRoom($conn, $query, $id) {
+        $stmt = $conn->prepare($query);
+        $stmt->bind_param('i', $id);
+        $stmt->execute();
+        
+        $result = $stmt->get_result();
+        $row = $result->fetch_all(MYSQLI_ASSOC);
+        return $row[0];
+    }
 }

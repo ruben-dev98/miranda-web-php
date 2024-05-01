@@ -46,7 +46,7 @@
                                 </p>
                                 <p class="rooms__grid-item-details-price">
                                     <span>${{ calculateDiscount($room['price'], $room['discount']) }}/Night</span><span><a
-                                            href="room-details.php/?id={{ $room['_id'] }}"></a></span>
+                                            href="room-details.php?id={{ $room['_id'] }}"></a></span>
                                 </p>
                             </div>
                         </div>

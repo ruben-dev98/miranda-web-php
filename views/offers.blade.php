@@ -12,13 +12,13 @@
     <section class="offers offers__cards --max-width">
         @foreach ($rooms as $room)
             <div class="offers__card">
-                <a href="room-details.php/?id={{ $room['_id'] }}"><img class="offers__img"
+                <a href="room-details.php?id={{ $room['_id'] }}"><img class="offers__img"
                         src="{{ json_decode($room['photo'])[0] }}" alt=""></a>
                 <div class="offers__inner">
                     <header class="offers__card-header">
                         <div>
                             <p class="offers__informative-text upper__case">{{ $room['type'] }}</p>
-                            <p class="offers__title"><a href="room-details.php/?id={{ $room['_id'] }}">Habitación
+                            <p class="offers__title"><a href="room-details.php?id={{ $room['_id'] }}">Habitación
                                     {{ $room['number'] }}</a></p>
                         </div>
                         <div class="offers__prices">
@@ -38,61 +38,18 @@
                         </p>
                         <section class="offers__amenities">
                             <ul class="offers__amenities-list room-details__amenities-list">
-                                <li class="room-details__amenities-list-item">
-                                    <img class="room-details__amenities-list-item-img"
-                                        src="assets/icon/amenities-air-conditioner.svg" alt="">
-                                    <span class="room-details__amenities-list-item-text">Air conditioner </span>
-                                </li>
-                                <li class="room-details__amenities-list-item">
-                                    <img class="room-details__amenities-list-item-img"
-                                        src="assets/icon/amenities-breakfast.svg" alt="">
-                                    <span class="room-details__amenities-list-item-text">Breakfast</span>
-                                </li>
-                                <li class="room-details__amenities-list-item">
-                                    <img class="room-details__amenities-list-item-img"
-                                        src="assets/icon/amenities-cleaning.svg" alt="">
-                                    <span class="room-details__amenities-list-item-text">Cleaning</span>
-                                </li>
-                                <li class="room-details__amenities-list-item">
-                                    <img class="room-details__amenities-list-item-img"
-                                        src="assets/icon/amenities-grocery.svg" alt="">
-                                    <span class="room-details__amenities-list-item-text">Grocery</span>
-                                </li>
-                                <li class="room-details__amenities-list-item">
-                                    <img class="room-details__amenities-list-item-img" src="assets/icon/amenities-shop.svg"
-                                        alt="">
-                                    <span class="room-details__amenities-list-item-text">Shop near</span>
-                                </li>
-                            </ul>
-                            <ul class="offers__amenities-list room-details__amenities-list">
-                                <li class="room-details__amenities-list-item">
-                                    <img class="room-details__amenities-list-item-img" src="assets/icon/amenities-wifi.svg"
-                                        alt="">
-                                    <span class="room-details__amenities-list-item-text">High speed WiFi</span>
-                                </li>
-                                <li class="room-details__amenities-list-item">
-                                    <img class="room-details__amenities-list-item-img"
-                                        src="assets/icon/amenities-kitchen.svg" alt="">
-                                    <span class="room-details__amenities-list-item-text">Kitchen</span>
-                                </li>
-                                <li class="room-details__amenities-list-item">
-                                    <img class="room-details__amenities-list-item-img"
-                                        src="assets/icon/amenities-shower.svg" alt="">
-                                    <span class="room-details__amenities-list-item-text">Shower</span>
-                                </li>
-                                <li class="room-details__amenities-list-item">
-                                    <img class="room-details__amenities-list-item-img"
-                                        src="assets/icon/amenities-single-bed.svg" alt="">
-                                    <span class="room-details__amenities-list-item-text">Single bed</span>
-                                </li>
-                                <li class="room-details__amenities-list-item">
-                                    <img class="room-details__amenities-list-item-img"
-                                        src="assets/icon/amenities-towels.svg" alt="">
-                                    <span class="room-details__amenities-list-item-text">Towels</span>
-                                </li>
+                                @foreach (json_decode($room['amenities']) as $amenity)
+                                    @if($amenity !== null)
+                                        <li class="room-details__amenities-list-item">
+                                            <img class="room-details__amenities-list-item-img"
+                                                src="assets/icon/amenities-air-conditioner.svg" alt="">
+                                            <span class="room-details__amenities-list-item-text">{{ $amenity }}</span>
+                                        </li>
+                                    @endif
+                                @endforeach
                             </ul>
                         </section>
-                        <button class="offers__button upper__case"><a href="room-details.php/?id={{ $room['_id'] }}">Book
+                        <button class="offers__button upper__case"><a href="room-details.php?id={{ $room['_id'] }}">Book
                                 Now</a></button>
                     </div>
                 </div>
@@ -137,7 +94,7 @@
                             </p>
                             <p class="rooms__grid-item-details-price">
                                 <span>${{ $room['price'] }}/Night</span><span><a
-                                        href="room-details.php/?id={{ $room['_id'] }}"></a></span>
+                                        href="room-details.php?id={{ $room['_id'] }}"></a></span>
                             </p>
                         </div>
                     </div>
