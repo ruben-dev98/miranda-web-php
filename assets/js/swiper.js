@@ -163,9 +163,14 @@ const rooms__list__swiper = new Swiper('.rooms-list__swiper', {
         fill: 'row'
     },
     direction: 'horizontal',
-    loop: false
+    loop: false,
 
-    /*pagination: {
-        el: '.rooms-list__swiper-pagination',
-    },*/
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+        /*Return bullets as numbers*/
+        renderBullet: function (index, className) {
+            return '<span class="' + className + '">' + (index + 1) + "</span>";
+        },
+    },    
 });

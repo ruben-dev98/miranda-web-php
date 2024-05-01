@@ -6,18 +6,3 @@
 @import "./home/menu.scss";
 @import "./home/rooms.scss";
 @import "./home/stats.scss";
-
-.rooms__swiper {
-    overflow-y: visible;
-}
-
-.rooms__swiper-wrapper {
-    overflow-y: visible;
-    .rooms__menu {
-        top: -2em;
-    }
-
-    .rooms__details {
-        top: 4em;
-    }
-}
