@@ -62,7 +62,8 @@
             </div>
             <div class="contact__form-control">
                 <img class="contact__form-control-img" src="assets/icon/contact-email.svg" alt="">
-                <input class="contact__input" placeholder="Enter email address" type="text" name="email" id="email">
+                <input class="contact__input" placeholder="Enter email address" type="text" name="email"
+                    id="email">
             </div>
             <div class="contact__form-control">
                 <img class="contact__form-control-img" src="assets/icon/contact-subject.svg" alt="">
@@ -71,11 +72,16 @@
             <div class="contact__form-control contact__form-control--area">
                 <img class="contact__form-control-img contact__form-control-img--area" src="assets/icon/contact-message.svg"
                     alt="">
-                <textarea class="contact__area" name="" placeholder="Enter message" id="" cols="30" rows="10" name="message" id="message"></textarea>
+                <textarea class="contact__area" name="" placeholder="Enter message" id="" cols="30" rows="10"
+                    name="message" id="message"></textarea>
             </div>
             <div class="contact__form-button">
                 <button class="button contact__button upper__case" type="submit">Send</button>
             </div>
         </form>
     </section>
+    @if ($formContact !== null)
+        @component('swal')
+        @endcomponent
+    @endif
 @endsection

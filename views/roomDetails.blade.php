@@ -49,8 +49,8 @@
                 <input type="text" id="phone" name="phone" value="223344453">
             </div>
             <div class="room-details__form-control">
-                <label for="message">Special Request</label>
-                <textarea class="room-details__area" cols="30" rows="10" name="message" id="message"></textarea>
+                <label for="special_request">Special Request</label>
+                <textarea class="room-details__area" cols="30" rows="10" name="special_request" id="special_request"></textarea>
             </div>
             <button class="button upper__case" type="submit">Check Availability</button>
         </form>
@@ -111,4 +111,6 @@
             <div class="offers__swiper-button-next swiper-button-next"></div>
         </div>
     </section>
+    @component('swal')
+    @endcomponent
 @endsection

@@ -19,6 +19,7 @@ class Connection extends mysqli {
         
         $result = $stmt->get_result();
         $row = $result->fetch_all(MYSQLI_ASSOC);
+        $stmt->close();
         return $row;
     }
 
@@ -29,6 +30,7 @@ class Connection extends mysqli {
         
         $result = $stmt->get_result();
         $row = $result->fetch_all(MYSQLI_ASSOC);
+        $stmt->close();
         return $row[0];
     }
 }
