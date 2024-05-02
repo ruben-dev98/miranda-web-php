@@ -7,7 +7,7 @@
             title: "Your data was sent successfully!",
             text: "Thanks for your time and patience!",
             icon: "success",
-            showConfirmButton: false
+            showConfirmButton: false,
             timer: 1500
         });
     });
