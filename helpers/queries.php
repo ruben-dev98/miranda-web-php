@@ -80,5 +80,9 @@ FROM amenity
 LEFT JOIN amenity_room on amenity_id = amenity._id
 RIGHT JOIN room on amenity_room.room_id = room._id
 LEFT JOIN (SELECT json_arrayagg(url) as urls, room_id as id_room FROM photo group by room_id) as photos on photos.id_room = room._id
-WHERE room._id NOT IN (SELECT booking.room_id FROM booking INNER JOIN room on room._id = booking.room_id WHERE booking.check_in <= ? AND booking.check_out > ?)
+WHERE room._id NOT IN (SELECT room_id FROM booking 
+INNER JOIN room on room._id = booking.room_id 
+WHERE (booking.check_in <= ?
+AND booking.check_out < ?) OR (booking.check_in >= ? AND booking.check_out > ?)
+GROUP BY room_id)
 GROUP BY room._id;";

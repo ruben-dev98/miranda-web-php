@@ -1,6 +1,6 @@
 <?php
     require_once(__DIR__ .'/setup.php');
-    require_once(__DIR__.'/calculateDiscount.php');
+    require_once(__DIR__.'/convertFunctions.php');
     require_once(__DIR__.'/queries.php');
     
     function renderTemplate($templateName, $values) {

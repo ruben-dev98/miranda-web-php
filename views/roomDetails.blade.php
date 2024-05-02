@@ -22,7 +22,7 @@
                     <span>/Night</span>
                 </p>
             </div>
-            <img class="room-details__details-img" src="assets/img/luxury-room.jpg" alt="">
+            <img class="room-details__details-img" src="{{json_decode($room['photo'])[0]}}" alt="">
         </div>
         <form class="room-details__form">
             <div class="room-details__form-title">

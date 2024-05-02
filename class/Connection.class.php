@@ -14,7 +14,7 @@ class Connection extends mysqli {
 
     public static function selectCheckAvailability($conn, $query, $params) {
         $stmt = $conn->prepare($query);
-        $stmt->bind_param('ss', $params['check_in'], $params['check_out']);
+        $stmt->bind_param('ssss', $params['check_in'], $params['check_out'], $params['check_in'], $params['check_out']);
         $stmt->execute();
         
         $result = $stmt->get_result();
