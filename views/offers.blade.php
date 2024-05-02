@@ -37,17 +37,8 @@
                             {{ $room['description'] }}
                         </p>
                         <section class="offers__amenities">
-                            <ul class="offers__amenities-list room-details__amenities-list">
-                                @foreach (json_decode($room['amenities']) as $amenity)
-                                    @if($amenity !== null)
-                                        <li class="room-details__amenities-list-item">
-                                            <img class="room-details__amenities-list-item-img"
-                                                src="assets/icon/amenities-air-conditioner.svg" alt="">
-                                            <span class="room-details__amenities-list-item-text">{{ $amenity }}</span>
-                                        </li>
-                                    @endif
-                                @endforeach
-                            </ul>
+                            @component('amenitiesDetails', ['room' => $room])
+                            @endcomponent
                         </section>
                         <button class="offers__button upper__case"><a href="room-details.php?id={{ $room['_id'] }}">Book
                                 Now</a></button>
@@ -64,7 +55,7 @@
                 @foreach ($popularRooms as $room)
                     <div class="offers__swiper-slide rooms__grid-item swiper-slide">
                         <img src="{{ json_decode($room['photo'])[0] }}" alt="">
-                        @component('amenitiesMenu')
+                        @component('amenitiesMenu', ['room' => $room])
                         @endcomponent
                         <div class="rooms__grid-item-details offers__details">
                             <p class="rooms__grid-item-details-title">{{ $room['type'] }} - Room {{ $room['number'] }}</p>
@@ -72,7 +63,7 @@
                                 {{ $room['description'] }}
                             </p>
                             <p class="rooms__grid-item-details-price">
-                                <span>${{ $room['price'] }}/Night</span><span><a
+                                <span>${{ calculateDiscount($room['price'], $room['discount']) }}/Night</span><span><a
                                         href="room-details.php?id={{ $room['_id'] }}"></a></span>
                             </p>
                         </div>

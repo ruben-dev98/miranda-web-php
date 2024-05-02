@@ -1,4 +1,8 @@
+@if($title === 'Offers')
+<ul class="offers__amenities-list room-details__amenities-list">
+@else
 <ul class="room-details__amenities-list">
+@endif
     @foreach (json_decode($room['amenities']) as $amenity)
         @if ($amenity !== null)
             <li class="room-details__amenities-list-item">

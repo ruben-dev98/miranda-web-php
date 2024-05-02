@@ -24,17 +24,17 @@
             </div>
             <img class="room-details__details-img" src="{{json_decode($room['photo'])[0]}}" alt="">
         </div>
-        <form class="room-details__form">
+        <form class="room-details__form" method="POST" action="/form-control.php">
             <div class="room-details__form-title">
                 <span>Check Availability</span>
             </div>
             <div class="room-details__form-control">
                 <label for="chek-in">Check In</label>
-                <input type="date" id="check_in" name="check_in">
+                <input type="date" id="check_in" name="check_in" value="{{$check_in}}">
             </div>
             <div class="room-details__form-control">
                 <label for="check-out">Check Out</label>
-                <input type="date" id="check_out" name="check_out">
+                <input type="date" id="check_out" name="check_out" value="{{$check_out}}">
             </div>
             <div class="room-details__form-control">
                 <label for="">Full Name</label>
@@ -88,8 +88,8 @@
                 @foreach ($rooms as $room)
                     <div class="offers__swiper-slide rooms__grid-item swiper-slide">
                         <img src="{{ json_decode($room['photo'])[0] }}" alt="">
-                        @component('amenitiesMenu')
-                        @endcomponent
+                        @component('amenitiesMenu', ['room' => $room])
+                                    @endcomponent
                         <div class="rooms__grid-item-details offers__details">
                             <p class="rooms__grid-item-details-title">{{ $room['type'] }} - Room {{ $room['number'] }}</p>
                             <p class="rooms__grid-item-details-text">

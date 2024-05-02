@@ -16,10 +16,11 @@
                     <div class="rooms swiper-slide">
                         <div class="rooms__grid-item">
                             <img class="rooms__grid-item-img" src="{{ json_decode($room['photo'])[0] }}" alt="">
-                            @component('amenitiesMenu')
+                            @component('amenitiesMenu', ['room' => $room])
                             @endcomponent
                             <div class="rooms__grid-item-details">
-                                <p class="rooms__grid-item-details-title">{{ $room['type'] }} - Room {{ $room['number'] }}</p>
+                                <p class="rooms__grid-item-details-title">{{ $room['type'] }} - Room {{ $room['number'] }}
+                                </p>
                                 <p class="rooms__grid-item-details-text">
                                     {{ $room['description'] }}
                                 </p>

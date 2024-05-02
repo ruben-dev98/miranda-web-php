@@ -50,7 +50,7 @@
             style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </section>
     <section class="contact__form --max-width">
-        <form method="POST">
+        <form method="POST" action="/form-control.php">
             <div class="contact__form-control">
                 <img class="contact__form-control-img contact__form-control-img--full-name"
                     src="assets/icon/contact-full-name.svg" alt="">

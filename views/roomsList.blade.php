@@ -18,9 +18,10 @@
                             <img class="rooms__list-item-img" src="{{ json_decode($room['photo'])[0] }}" alt="">
                             <div class="rooms__list-content">
                                 <div class="rooms__list-item-details">
-                                    @component('amenitiesMenu')
+                                    @component('amenitiesMenu', ['room' => $room])
                                     @endcomponent
-                                    <p class="rooms__list-item-details-title">{{ $room['type'] }} - Room {{ $room['number'] }}
+                                    <p class="rooms__list-item-details-title">{{ $room['type'] }} - Room
+                                        {{ $room['number'] }}
                                     </p>
                                     <p class="rooms__list-item-details-text">
                                         {{ $room['description'] }}
@@ -28,7 +29,7 @@
                                 </div>
                                 <p class="rooms__list-item-details-price">
                                     <span>${{ calculateDiscount($room['price'], $room['discount']) }}/Night</span><span><a
-                                            href="room-details.php?id={{ $room['_id'] }}"></a></span>
+                                            href="room-details.php?id={{ $room['_id'] }}&check_in={{ $check_in }}&check_out={{ $check_out }}"></a></span>
                                 </p>
                             </div>
                         </div>
