@@ -85,6 +85,17 @@
                 height: 3.75rem;
                 margin-bottom: 0.75rem;
             }
+
+            textarea {
+                font-family: $font-archivo;
+                padding: 0rem 1.75rem;
+                border: 0em;
+                display: block;
+                width: 100%;
+                background-color: #f8f8f8;
+                height: 3.75rem;
+                margin-bottom: 0.75rem;
+            }
         }
 
         button {
@@ -108,7 +119,7 @@
         
         &__details {
             display: grid;
-            grid-template-columns: 70% 30%;
+            grid-template-columns: 1fr 1fr;
             grid-template-areas:
                 'info form'
                 'text text'
@@ -134,7 +145,7 @@
     
             &-img {
                 width: 770px;
-                height: 490px;
+                height: 662.5px;
             }
 
             &-informative-text {

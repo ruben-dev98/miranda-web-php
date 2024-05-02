@@ -24,29 +24,33 @@
             </div>
             <img class="room-details__details-img" src="{{json_decode($room['photo'])[0]}}" alt="">
         </div>
-        <form class="room-details__form" method="POST" action="/form-control.php">
+        <form class="room-details__form" method="POST">
             <div class="room-details__form-title">
                 <span>Check Availability</span>
             </div>
             <div class="room-details__form-control">
-                <label for="chek-in">Check In</label>
+                <label for="check_in">Check In</label>
                 <input type="date" id="check_in" name="check_in" value="{{$check_in}}">
             </div>
             <div class="room-details__form-control">
-                <label for="check-out">Check Out</label>
+                <label for="check_out">Check Out</label>
                 <input type="date" id="check_out" name="check_out" value="{{$check_out}}">
             </div>
             <div class="room-details__form-control">
-                <label for="">Full Name</label>
-                <input type="text" id="full_name" name="full_name">
+                <label for="full_name">Full Name</label>
+                <input type="text" id="full_name" name="full_name" value="Name">
             </div>
             <div class="room-details__form-control">
-                <label for="">Email</label>
-                <input type="email" id="email" name="email">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" value="dddd@gmail.com">
             </div>
             <div class="room-details__form-control">
-                <label for="">Phone</label>
-                <input type="text" id="phone" name="phone">
+                <label for="phone">Phone</label>
+                <input type="text" id="phone" name="phone" value="223344453">
+            </div>
+            <div class="room-details__form-control">
+                <label for="message">Special Request</label>
+                <textarea class="room-details__area" cols="30" rows="10" name="message" id="message"></textarea>
             </div>
             <button class="button upper__case" type="submit">Check Availability</button>
         </form>

@@ -2035,6 +2035,16 @@
   height: 3.75rem;
   margin-bottom: 0.75rem;
 }
+.room-details__form-control textarea {
+  font-family: "Archivo", sans-serif;
+  padding: 0rem 1.75rem;
+  border: 0em;
+  display: block;
+  width: 100%;
+  background-color: #f8f8f8;
+  height: 3.75rem;
+  margin-bottom: 0.75rem;
+}
 .room-details__form button {
   font-weight: 400;
 }
@@ -2050,7 +2060,7 @@
 @media (min-width: 1000px) {
   .room-details__details {
     display: grid;
-    grid-template-columns: 70% 30%;
+    grid-template-columns: 1fr 1fr;
     grid-template-areas: "info form" "text text";
     margin: 0 auto;
     padding: 2.5em 1.25em;
@@ -2071,7 +2081,7 @@
   }
   .room-details__details-img {
     width: 770px;
-    height: 490px;
+    height: 662.5px;
   }
   .room-details__details-informative-text {
     color: #777;
