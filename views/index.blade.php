@@ -66,34 +66,14 @@
             <div class="rooms__swiper-wrapper swiper-wrapper">
                 @foreach ($rooms as $room)
                     <div class="rooms__swiper-slide swiper-slide">
-                        <menu class="rooms__menu">
-                            <span class="rooms__menu-item">
-                                <img src="assets/icon/bed.svg" alt="icono de una cama">
-                            </span>
-                            <span class="rooms__menu-item">
-                                <img src="assets/icon/wifi.svg" alt="icono de conexión wifi">
-                            </span>
-                            <span class="rooms__menu-item">
-                                <img src="assets/icon/car.svg" alt="icono de un coche">
-                            </span>
-                            <span class="rooms__menu-item">
-                                <img src="assets/icon/snowflake.svg" alt="icono de un copo de nieve">
-                            </span>
-                            <span class="rooms__menu-item">
-                                <img src="assets/icon/gym.svg" alt="icono de una mancuerna">
-                            </span>
-                            <span class="rooms__menu-item">
-                                <img src="assets/icon/no-smoking.svg" alt="icono de prohibido fumar">
-                            </span>
-                            <span class="rooms__menu-item">
-                                <img src="assets/icon/cocktail.svg" alt="icono de un coctel">
-                            </span>
-                        </menu>
+                        @component('')
+                            
+                        @endcomponent
                         <div class="rooms__image" style='background-image: url({{ json_decode($room['photo'])[0] }});'>
                         </div>
                         <div class="rooms__details">
                             <div class="rooms__details-info">
-                                <p class="rooms__details-title">{{ $room['type'] }} - {{ $room['number'] }}</p>
+                                <p class="rooms__details-title">{{ $room['type'] }} - Room {{ $room['number'] }}</p>
                                 <p class="rooms__details-text">
                                     {{ $room['description'] }}
                                 </p>

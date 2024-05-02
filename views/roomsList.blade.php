@@ -18,30 +18,9 @@
                             <img class="rooms__list-item-img" src="{{ json_decode($room['photo'])[0] }}" alt="">
                             <div class="rooms__list-content">
                                 <div class="rooms__list-item-details">
-                                    <menu class="rooms__list-item-menu rooms__menu">
-                                        <span class="rooms__menu-item">
-                                            <img src="assets/icon/bed.svg" alt="icono de una cama">
-                                        </span>
-                                        <span class="rooms__menu-item">
-                                            <img src="assets/icon/wifi.svg" alt="icono de conexión wifi">
-                                        </span>
-                                        <span class="rooms__menu-item">
-                                            <img src="assets/icon/car.svg" alt="icono de un coche">
-                                        </span>
-                                        <span class="rooms__menu-item">
-                                            <img src="assets/icon/snowflake.svg" alt="icono de un copo de nieve">
-                                        </span>
-                                        <span class="rooms__menu-item">
-                                            <img src="assets/icon/gym.svg" alt="icono de una mancuerna">
-                                        </span>
-                                        <span class="rooms__menu-item">
-                                            <img src="assets/icon/no-smoking.svg" alt="icono de prohibido fumar">
-                                        </span>
-                                        <span class="rooms__menu-item">
-                                            <img src="assets/icon/cocktail.svg" alt="icono de un coctel">
-                                        </span>
-                                    </menu>
-                                    <p class="rooms__list-item-details-title">{{ $room['type'] }} - {{ $room['number'] }}
+                                    @component('amenitiesMenu')
+                                    @endcomponent
+                                    <p class="rooms__list-item-details-title">{{ $room['type'] }} - Room {{ $room['number'] }}
                                     </p>
                                     <p class="rooms__list-item-details-text">
                                         {{ $room['description'] }}

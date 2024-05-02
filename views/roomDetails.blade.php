@@ -14,7 +14,7 @@
             <div class="details-info__text">
                 <div>
                     <p class="room-details__details-informative-text upper__case">{{ $room['type'] }}</p>
-                    <p class="room-details__details-title">Habitación {{ $room['number'] }}</p>
+                    <p class="room-details__details-title">Room {{ $room['number'] }}</p>
                 </div>
                 <p class="room-details__details-price">
                     <span>$</span>
@@ -56,17 +56,8 @@
     </section>
     <section class="room-details__amenities --max-width">
         <p class="room-details__amenities-title">Amenities</p>
-        <ul class="room-details__amenities-list">
-            @foreach(json_decode($room['amenities']) as $amenity)
-                @if($amenity !== null)
-                    <li class="room-details__amenities-list-item">
-                        <img class="room-details__amenities-list-item-img" src="assets/icon/amenities-air-conditioner.svg"
-                            alt="">
-                        <span class="room-details__amenities-list-item-text">{{ $amenity }}</span>
-                    </li>
-                @endif
-            @endforeach
-        </ul>
+        @component('amenitiesDetails')
+        @endcomponent
     </section>
     <section class="room-details__founder --max-width">
         <div class="room-details__founder-content">
@@ -97,31 +88,10 @@
                 @foreach ($rooms as $room)
                     <div class="offers__swiper-slide rooms__grid-item swiper-slide">
                         <img src="{{ json_decode($room['photo'])[0] }}" alt="">
-                        <menu class="rooms__grid-item-menu rooms__menu offers__menu">
-                            <span class="rooms__menu-item">
-                                <img src="assets/icon/bed.svg" alt="icono de una cama">
-                            </span>
-                            <span class="rooms__menu-item">
-                                <img src="assets/icon/wifi.svg" alt="icono de conexión wifi">
-                            </span>
-                            <span class="rooms__menu-item">
-                                <img src="assets/icon/car.svg" alt="icono de un coche">
-                            </span>
-                            <span class="rooms__menu-item">
-                                <img src="assets/icon/snowflake.svg" alt="icono de un copo de nieve">
-                            </span>
-                            <span class="rooms__menu-item">
-                                <img src="assets/icon/gym.svg" alt="icono de una mancuerna">
-                            </span>
-                            <span class="rooms__menu-item">
-                                <img src="assets/icon/no-smoking.svg" alt="icono de prohibido fumar">
-                            </span>
-                            <span class="rooms__menu-item">
-                                <img src="assets/icon/cocktail.svg" alt="icono de un coctel">
-                            </span>
-                        </menu>
+                        @component('amenitiesMenu')
+                        @endcomponent
                         <div class="rooms__grid-item-details offers__details">
-                            <p class="rooms__grid-item-details-title">{{ $room['type'] }} - {{ $room['number'] }}</p>
+                            <p class="rooms__grid-item-details-title">{{ $room['type'] }} - Room {{ $room['number'] }}</p>
                             <p class="rooms__grid-item-details-text">
                                 {{ $room['description'] }}
                             </p>

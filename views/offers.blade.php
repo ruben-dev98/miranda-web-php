@@ -18,7 +18,7 @@
                     <header class="offers__card-header">
                         <div>
                             <p class="offers__informative-text upper__case">{{ $room['type'] }}</p>
-                            <p class="offers__title"><a href="room-details.php?id={{ $room['_id'] }}">Habitación
+                            <p class="offers__title"><a href="room-details.php?id={{ $room['_id'] }}">Room
                                     {{ $room['number'] }}</a></p>
                         </div>
                         <div class="offers__prices">
@@ -64,31 +64,10 @@
                 @foreach ($popularRooms as $room)
                     <div class="offers__swiper-slide rooms__grid-item swiper-slide">
                         <img src="{{ json_decode($room['photo'])[0] }}" alt="">
-                        <menu class="rooms__grid-item-menu rooms__menu offers__menu">
-                            <span class="rooms__menu-item">
-                                <img src="assets/icon/bed.svg" alt="icono de una cama">
-                            </span>
-                            <span class="rooms__menu-item">
-                                <img src="assets/icon/wifi.svg" alt="icono de conexión wifi">
-                            </span>
-                            <span class="rooms__menu-item">
-                                <img src="assets/icon/car.svg" alt="icono de un coche">
-                            </span>
-                            <span class="rooms__menu-item">
-                                <img src="assets/icon/snowflake.svg" alt="icono de un copo de nieve">
-                            </span>
-                            <span class="rooms__menu-item">
-                                <img src="assets/icon/gym.svg" alt="icono de una mancuerna">
-                            </span>
-                            <span class="rooms__menu-item">
-                                <img src="assets/icon/no-smoking.svg" alt="icono de prohibido fumar">
-                            </span>
-                            <span class="rooms__menu-item">
-                                <img src="assets/icon/cocktail.svg" alt="icono de un coctel">
-                            </span>
-                        </menu>
+                        @component('amenitiesMenu')
+                        @endcomponent
                         <div class="rooms__grid-item-details offers__details">
-                            <p class="rooms__grid-item-details-title">{{ $room['type'] }} - {{ $room['number'] }}</p>
+                            <p class="rooms__grid-item-details-title">{{ $room['type'] }} - Room {{ $room['number'] }}</p>
                             <p class="rooms__grid-item-details-text">
                                 {{ $room['description'] }}
                             </p>

@@ -1413,6 +1413,9 @@
   .rooms__menu-item:not(:last-child) {
     margin-right: 1em;
   }
+  .rooms__menu-item svg path {
+    fill: #111;
+  }
   .rooms__menu-item img {
     width: 1.5rem;
     height: 1.5rem;

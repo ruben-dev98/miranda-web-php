@@ -16,31 +16,10 @@
                     <div class="rooms swiper-slide">
                         <div class="rooms__grid-item">
                             <img class="rooms__grid-item-img" src="{{ json_decode($room['photo'])[0] }}" alt="">
-                            <menu class="rooms__grid-item-menu rooms__menu">
-                                <span class="rooms__menu-item">
-                                    <img src="assets/icon/bed.svg" alt="icono de una cama">
-                                </span>
-                                <span class="rooms__menu-item">
-                                    <img src="assets/icon/wifi.svg" alt="icono de conexión wifi">
-                                </span>
-                                <span class="rooms__menu-item">
-                                    <img src="assets/icon/car.svg" alt="icono de un coche">
-                                </span>
-                                <span class="rooms__menu-item">
-                                    <img src="assets/icon/snowflake.svg" alt="icono de un copo de nieve">
-                                </span>
-                                <span class="rooms__menu-item">
-                                    <img src="assets/icon/gym.svg" alt="icono de una mancuerna">
-                                </span>
-                                <span class="rooms__menu-item">
-                                    <img src="assets/icon/no-smoking.svg" alt="icono de prohibido fumar">
-                                </span>
-                                <span class="rooms__menu-item">
-                                    <img src="assets/icon/cocktail.svg" alt="icono de un coctel">
-                                </span>
-                            </menu>
+                            @component('amenitiesMenu')
+                            @endcomponent
                             <div class="rooms__grid-item-details">
-                                <p class="rooms__grid-item-details-title">{{ $room['type'] }} - {{ $room['number'] }}</p>
+                                <p class="rooms__grid-item-details-title">{{ $room['type'] }} - Room {{ $room['number'] }}</p>
                                 <p class="rooms__grid-item-details-text">
                                     {{ $room['description'] }}
                                 </p>
