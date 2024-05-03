@@ -1,4 +1,5 @@
 @extends('layout')
+@section('title', 'Rooms Details')
 @section('content')
     <header class="banner">
         <div class="banner__inner banner__inner--rooms --max-width">

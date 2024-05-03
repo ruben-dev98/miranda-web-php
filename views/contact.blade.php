@@ -1,4 +1,5 @@
 @extends('layout')
+@section('title', 'Contact')
 @section('content')
     <header class="banner">
         <div class="banner__inner banner__inner--about --max-width">

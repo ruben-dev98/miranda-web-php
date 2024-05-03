@@ -1,7 +1,5 @@
 <?php
-    require_once(__DIR__ .'/helpers/renderTemplate.php');
-    require_once(__DIR__ .'/helpers/config.php');
-    require_once(__DIR__.'/helpers/formControl.php');
+    require_once(__DIR__ .'/helpers/setup.php');
     session_start();
 
     $id = $_GET['id'];
@@ -12,11 +10,11 @@
         unset($_SESSION['times']);
     }
 
-    $room = Connection::selectRoom($conn, $queryOneRoom, $id);
-    $rooms = Connection::select($conn, $queryRoomsOnSwiper);
+    $room = Connection::executeQueryWithParams($conn, $queryOneRoom, [$id], 'i');
+    $rooms = Connection::executeQuery($conn, $queryRoomsOnSwiper);
     $conn->close();
 
     $templateName = 'roomDetails';
-    $values = ['title' => 'Rooms Details', 'rooms' => $rooms, 'room' => $room, 'check_in' => $check_in, 'check_out' => $check_out, 'formBooking' => $formBooking];
-    renderTemplate($templateName, $values);
+    $values = ['rooms' => $rooms, 'room' => $room, 'check_in' => $check_in, 'check_out' => $check_out, 'formBooking' => $formBooking];
+    renderTemplate('roomDetails', $values);
 ?>

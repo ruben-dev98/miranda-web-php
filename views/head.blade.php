@@ -20,5 +20,5 @@
     <script src="assets/js/header.js" defer></script>
     <script src="assets/js/menu.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.8/dist/sweetalert2.all.min.js"></script>
-    <title>{{ $title }}</title>
+    <title>@yield('title')</title>
 </head>
