@@ -22,7 +22,7 @@
                     <span>/Night</span>
                 </p>
             </div>
-            <img class="room-details__details-img" src="{{json_decode($room['photo'])[0]}}" alt="">
+            <img class="room-details__details-img" src="{{ json_decode($room['photo'])[0] }}" alt="">
         </div>
         <form class="room-details__form" method="POST">
             <div class="room-details__form-title">
@@ -30,11 +30,11 @@
             </div>
             <div class="room-details__form-control">
                 <label for="check_in">Check In</label>
-                <input type="date" id="check_in" name="check_in" value="{{$check_in}}">
+                <input type="date" id="check_in" name="check_in" value="{{ $check_in }}">
             </div>
             <div class="room-details__form-control">
                 <label for="check_out">Check Out</label>
-                <input type="date" id="check_out" name="check_out" value="{{$check_out}}">
+                <input type="date" id="check_out" name="check_out" value="{{ $check_out }}">
             </div>
             <div class="room-details__form-control">
                 <label for="full_name">Full Name</label>
@@ -93,7 +93,7 @@
                     <div class="offers__swiper-slide rooms__grid-item swiper-slide">
                         <img src="{{ json_decode($room['photo'])[0] }}" alt="">
                         @component('amenitiesMenu', ['room' => $room])
-                                    @endcomponent
+                        @endcomponent
                         <div class="rooms__grid-item-details offers__details">
                             <p class="rooms__grid-item-details-title">{{ $room['type'] }} - Room {{ $room['number'] }}</p>
                             <p class="rooms__grid-item-details-text">
@@ -111,6 +111,8 @@
             <div class="offers__swiper-button-next swiper-button-next"></div>
         </div>
     </section>
-    @component('swal')
-    @endcomponent
+    @if ($formBooking !== null)
+        @component('swal')
+        @endcomponent
+    @endif
 @endsection
