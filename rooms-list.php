@@ -5,8 +5,9 @@
 
     $params = ['check_in' => $check_in, 'check_out' => $check_out];
     $rooms = Connection::executeQueryWithParams($conn, $queryRoomsCheckAvailabilityWithDates, $params, 'ss');
+    $formatRooms = formatListRooms($rooms);
     $conn->close();
 
-    $values = ['rooms' => $rooms, 'check_in' => $check_in, 'check_out' => $check_out];
+    $values = ['rooms' => $formatRooms, 'check_in' => $check_in, 'check_out' => $check_out];
     renderTemplate('roomList', $values);
 ?>

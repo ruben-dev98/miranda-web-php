@@ -16,21 +16,21 @@
                 @foreach ($rooms as $room)
                     <div class="rooms-list__swiper-slide swiper-slide">
                         <div class="rooms__list-item">
-                            <img class="rooms__list-item-img" src="{{ json_decode($room['photo'])[0] }}" alt="">
+                            <img class="rooms__list-item-img" src="{{ $room['photo'] }}" alt="">
                             <div class="rooms__list-content">
                                 <div class="rooms__list-item-details">
                                     @component('amenitiesMenu', ['room' => $room])
                                     @endcomponent
-                                    <p class="rooms__list-item-details-title">{{ $room['type'] }} - Room
-                                        {{ $room['number'] }}
+                                    <p class="rooms__list-item-details-title">
+                                        {{ $room['type_name'] }}
                                     </p>
                                     <p class="rooms__list-item-details-text">
                                         {{ $room['description'] }}
                                     </p>
                                 </div>
                                 <p class="rooms__list-item-details-price">
-                                    <span>${{ calculateDiscount($room['price'], $room['discount']) }}/Night</span><span><a
-                                            href="room-details.php?id={{ $room['_id'] }}&check_in={{ $check_in }}&check_out={{ $check_out }}"></a></span>
+                                    <span>${{ $room['price'] }}/Night</span><span><a
+                                            href="room-details.php?id={{ $room['id'] }}&check_in={{ $check_in }}&check_out={{ $check_out }}"></a></span>
                                 </p>
                             </div>
                         </div>

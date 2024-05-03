@@ -1413,12 +1413,10 @@
   .rooms__menu-item:not(:last-child) {
     margin-right: 1em;
   }
-  .rooms__menu-item svg path {
-    fill: #111;
-  }
   .rooms__menu-item img {
     width: 1.5rem;
     height: 1.5rem;
+    filter: invert(1);
   }
   .rooms__details {
     padding: 1em 0em;
@@ -1829,6 +1827,10 @@
   line-height: 1.5rem;
   letter-spacing: 0rem;
   margin-bottom: 1.5em;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
 }
 .rooms__grid-item-details-price span {
   font-family: "Archivo", sans-serif;

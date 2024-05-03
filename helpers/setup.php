@@ -4,6 +4,7 @@
     require_once(__DIR__.'/convertFunctions.php');
     require_once(__DIR__.'/queries.php');
     require_once(__DIR__.'/formControl.php');
+    require_once(__DIR__.'/blade/formatData.php');
 
     use eftec\bladeone\BladeOne;
 

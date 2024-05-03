@@ -13,22 +13,21 @@
     <section class="offers offers__cards --max-width">
         @foreach ($rooms as $room)
             <div class="offers__card">
-                <a href="room-details.php?id={{ $room['_id'] }}"><img class="offers__img"
-                        src="{{ json_decode($room['photo'])[0] }}" alt=""></a>
+                <a href="room-details.php?id={{ $room['id'] }}"><img class="offers__img"
+                        src="{{ $room['photo'] }}" alt=""></a>
                 <div class="offers__inner">
                     <header class="offers__card-header">
                         <div>
                             <p class="offers__informative-text upper__case">{{ $room['type'] }}</p>
-                            <p class="offers__title"><a href="room-details.php?id={{ $room['_id'] }}">Room
-                                    {{ $room['number'] }}</a></p>
+                            <p class="offers__title"><a href="room-details.php?id={{ $room['id'] }}">{{ $room['name'] }}</a></p>
                         </div>
                         <div class="offers__prices">
                             <p class="offers__price offers__price--crossed">
-                                <span>${{ calculateDiscount($room['price'], 0) }}</span>
+                                <span>${{ $room['price_not_discount'] }}</span>
                                 <span>/Night</span>
                             </p>
                             <p class="offers__price">
-                                <span>${{ calculateDiscount($room['price'], $room['discount']) }}</span>
+                                <span>${{ $room['price'] }}</span>
                                 <span>/Night</span>
                             </p>
                         </div>
@@ -41,7 +40,7 @@
                             @component('amenitiesDetails', ['room' => $room])
                             @endcomponent
                         </section>
-                        <button class="offers__button upper__case"><a href="room-details.php?id={{ $room['_id'] }}">Book
+                        <button class="offers__button upper__case"><a href="room-details.php?id={{ $room['id'] }}">Book
                                 Now</a></button>
                     </div>
                 </div>
@@ -55,17 +54,17 @@
             <div class="offers__swiper-wrapper swiper-wrapper">
                 @foreach ($popularRooms as $room)
                     <div class="offers__swiper-slide rooms__grid-item swiper-slide">
-                        <img src="{{ json_decode($room['photo'])[0] }}" alt="">
+                        <img src="{{ $room['photo'] }}" alt="">
                         @component('amenitiesMenu', ['room' => $room])
                         @endcomponent
                         <div class="rooms__grid-item-details offers__details">
-                            <p class="rooms__grid-item-details-title">{{ $room['type'] }} - Room {{ $room['number'] }}</p>
+                            <p class="rooms__grid-item-details-title">{{ $room['type_name'] }}</p>
                             <p class="rooms__grid-item-details-text">
                                 {{ $room['description'] }}
                             </p>
                             <p class="rooms__grid-item-details-price">
-                                <span>${{ calculateDiscount($room['price'], $room['discount']) }}/Night</span><span><a
-                                        href="room-details.php?id={{ $room['_id'] }}"></a></span>
+                                <span>${{ $room['price'] }}/Night</span><span><a
+                                        href="room-details.php?id={{ $room['id'] }}"></a></span>
                             </p>
                         </div>
                     </div>

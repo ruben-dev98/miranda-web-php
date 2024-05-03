@@ -11,10 +11,14 @@
     }
 
     $room = Connection::executeQueryWithParams($conn, $queryOneRoom, [$id], 'i');
+    $roomFormat = formatRoom($room);
+    
     $rooms = Connection::executeQuery($conn, $queryRoomsOnSwiper);
+    $formatRooms = formatListRooms($rooms);
+    
     $conn->close();
 
     $templateName = 'roomDetails';
-    $values = ['rooms' => $rooms, 'room' => $room, 'check_in' => $check_in, 'check_out' => $check_out, 'formBooking' => $formBooking];
+    $values = ['rooms' => $formatRooms, 'room' => $roomFormat, 'check_in' => $check_in, 'check_out' => $check_out, 'formBooking' => $formBooking];
     renderTemplate('roomDetails', $values);
 ?>

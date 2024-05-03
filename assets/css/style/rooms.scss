@@ -47,6 +47,10 @@
                 line-height: 1.5rem;
                 letter-spacing: 0rem;
                 margin-bottom: 1.5em;
+                overflow: hidden;
+                display: -webkit-box;
+                -webkit-line-clamp: 1;
+                -webkit-box-orient: vertical;
             }
 
             &-price {
@@ -94,10 +98,10 @@
             opacity: 1;
             border-radius: 0;
 
-        &.swiper-pagination-bullet-active {
-            color: $color-light;
-            background-color: $color-secondary;
-        }
+            &.swiper-pagination-bullet-active {
+                color: $color-light;
+                background-color: $color-secondary;
+            }
             &:hover {
                 color: $color-light;
                 background-color: $color-secondary;

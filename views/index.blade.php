@@ -69,18 +69,18 @@
                     <div class="rooms__swiper-slide swiper-slide">
                         @component('amenitiesMenu', ['room' => $room])
                         @endcomponent
-                        <div class="rooms__image" style='background-image: url({{ json_decode($room['photo'])[0] }});'>
+                        <div class="rooms__image" style='background-image: url({{ $room['photo'] }});'>
                         </div>
                         <div class="rooms__details">
                             <div class="rooms__details-info">
-                                <p class="rooms__details-title">{{ $room['type'] }} - Room {{ $room['number'] }}</p>
+                                <p class="rooms__details-title">{{ $room['type_name'] }}</p>
                                 <p class="rooms__details-text">
                                     {{ $room['description'] }}
                                 </p>
                             </div>
                             <p class="rooms__details-price">
                                 <span>$</span>
-                                <span>{{ calculateDiscount($room['price'], $room['discount']) }}</span>
+                                <span>{{ $room['price'] }}</span>
                                 <span>/Night</span>
                             </p>
                         </div>
