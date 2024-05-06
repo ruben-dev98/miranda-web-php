@@ -85,7 +85,13 @@
         </form>
     </section>
     @if ($formContact !== null)
-        @component('swal')
-        @endcomponent
+        @if($operationSuccessful)
+            @component('swal', ['title' => 'Your data was sent successfully', 'text' => 'Thanks for your time', 'icon' => 'success'])
+            @endcomponent
+        @else
+            @component('swal', ['title' => 'Your data has some errors', 'text' => 'Incorrect data', 'icon' => 'error'])
+            @endcomponent
+        @endif
+        
     @endif
 @endsection

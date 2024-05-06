@@ -8,6 +8,7 @@
         unset($_SESSION['times']);
     } else {
         $dataValidated = validateForm($formContact);
+        print_r($dataValidated);
         $insertSuccessfully = Connection::executeQueryInsert($conn, $queryInsertMessage, $dataValidated, 'sssss');
     }
 

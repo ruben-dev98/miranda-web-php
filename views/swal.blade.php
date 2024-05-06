@@ -4,9 +4,9 @@
     const enlace = document.querySelector('#swal')
     enlace.addEventListener('click', () => {
         Swal.fire({
-            title: "Your data was sent successfully!",
-            text: "Thanks for your time and patience!",
-            icon: "success",
+            title: '{{ $title }}',
+            text: '{{ $text }}',
+            icon: '{{ $icon }}',
             showConfirmButton: false,
             timer: 1500
         });
