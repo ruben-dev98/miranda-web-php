@@ -65,7 +65,7 @@
             </div>
             <div class="contact__form-control">
                 <img class="contact__form-control-img" src="assets/icon/contact-email.svg" alt="">
-                <input class="contact__input" placeholder="Enter email address" type="text" name="email" id="email"
+                <input class="contact__input" placeholder="Enter email address" type="email" name="email" id="email"
                     required>
             </div>
             <div class="contact__form-control">
@@ -92,6 +92,5 @@
             @component('swal', ['title' => 'Your data has some errors', 'text' => 'Incorrect data', 'icon' => 'error'])
             @endcomponent
         @endif
-        
     @endif
 @endsection

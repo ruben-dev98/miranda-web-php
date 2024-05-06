@@ -24,12 +24,14 @@ class Connection extends mysqli {
     }
 
     public static function executeQueryInsert($conn, $query, $params, $paramsType) {
-        $stmt = $conn->prepare($query);
-        $stmt->bind_param($paramsType, ...$params);
-        $stmt->execute();
-        
-        $result = $stmt->get_result();
-        $stmt->close();
-        return $result;
+        try {
+            $stmt = $conn->prepare($query);
+            $stmt->bind_param($paramsType, ...$params);
+            $stmt->execute();
+            $stmt->close();
+            return true;
+        } catch(Exception) {
+            return false;
+        }
     }
 }

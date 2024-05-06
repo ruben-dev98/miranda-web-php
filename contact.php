@@ -4,14 +4,10 @@
 
     $formContact = formControl();
     
-    if($formContact === null) {
-        unset($_SESSION['times']);
-    } else {
-        $dataValidated = validateForm($formContact);
-        print_r($dataValidated);
-        $insertSuccessfully = Connection::executeQueryInsert($conn, $queryInsertMessage, $dataValidated, 'sssss');
+    if($formContact !== null) {
+        $insertSuccessfully = Connection::executeQueryInsert($conn, $queryInsertMessage, $formContact, 'sssss');
     }
-
+    
     $values = ['formContact' => $formContact, 'operationSuccessful' => $insertSuccessfully];
     renderTemplate('contact', $values);
 ?>

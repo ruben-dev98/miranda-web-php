@@ -104,10 +104,11 @@
                             <p class="rooms__grid-item-details-price">
                                 <span>${{ $room['price'] }}/Night</span>
                                 <span>
-                                    @if($check_in === null)
+                                    @if ($check_in === null)
                                         <a href="room-details.php?id={{ $room['id'] }}"></a>
                                     @else
-                                        <a href="room-details.php?id={{ $room['id'] }}&check_in={{ $check_in }}&check_out={{ $check_out }}"></a>
+                                        <a
+                                            href="room-details.php?id={{ $room['id'] }}&check_in={{ $check_in }}&check_out={{ $check_out }}"></a>
                                     @endif
                                 </span>
                             </p>
@@ -120,8 +121,22 @@
         </div>
     </section>
     @if ($formBooking !== null)
-        @component('swal')
-
-        @endcomponent
+        @if ($operationSuccessful)
+            @component('swal', [
+                'title' => '¡Thank you for your request!',
+                'text' => 'We have received it correctly. Someone from our Team will get back to you very soon.
+                        <br>The Miranda Hotel',
+                'icon' => 'error',
+            ])
+            @endcomponent
+        @else
+            @component('swal', [
+                'title' => '¡We are sorry!',
+                'text' => 'This room is not available for the dates you need. Please try different dates or try a different room. 
+                        <br>The Miranda Hotel',
+                'icon' => 'success',
+            ])
+            @endcomponent
+        @endif
     @endif
 @endsection
