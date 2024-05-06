@@ -31,28 +31,29 @@
             </div>
             <div class="room-details__form-control">
                 <label for="check_in">Check In</label>
-                <input type="date" id="check_in" name="check_in" value="{{ $check_in }}">
+                <input type="date" id="check_in" name="check_in" value="{{ $check_in }}" required>
             </div>
             <div class="room-details__form-control">
                 <label for="check_out">Check Out</label>
-                <input type="date" id="check_out" name="check_out" value="{{ $check_out }}">
+                <input type="date" id="check_out" name="check_out" value="{{ $check_out }}" required>
             </div>
             <div class="room-details__form-control">
                 <label for="full_name">Full Name</label>
-                <input type="text" id="full_name" name="full_name" value="Name">
+                <input type="text" id="full_name" name="full_name" value="Name" required>
             </div>
             <div class="room-details__form-control">
                 <label for="email">Email</label>
-                <input type="email" id="email" name="email" value="dddd@gmail.com">
+                <input type="email" id="email" name="email" value="dddd@gmail.com" required>
             </div>
             <div class="room-details__form-control">
                 <label for="phone">Phone</label>
-                <input type="text" id="phone" name="phone" value="223344453">
+                <input type="text" id="phone" name="phone" value="223344453" required>
             </div>
             <div class="room-details__form-control">
                 <label for="special_request">Special Request</label>
                 <textarea class="room-details__area" cols="30" rows="10" name="special_request" id="special_request"></textarea>
             </div>
+            <input type="hidden" name="room_id" id="room_id" value="{{ $room['id'] }}">
             <button class="button upper__case" type="submit">Check Availability</button>
         </form>
         <p class="room-details__text">
@@ -101,8 +102,14 @@
                                 {{ $room['description'] }}
                             </p>
                             <p class="rooms__grid-item-details-price">
-                                <span>${{ $room['price'] }}/Night</span><span><a
-                                        href="room-details.php?id={{ $room['id'] }}"></a></span>
+                                <span>${{ $room['price'] }}/Night</span>
+                                <span>
+                                    @if($check_in === null)
+                                        <a href="room-details.php?id={{ $room['id'] }}"></a>
+                                    @else
+                                        <a href="room-details.php?id={{ $room['id'] }}&check_in={{ $check_in }}&check_out={{ $check_out }}"></a>
+                                    @endif
+                                </span>
                             </p>
                         </div>
                     </div>
@@ -114,6 +121,7 @@
     </section>
     @if ($formBooking !== null)
         @component('swal')
+
         @endcomponent
     @endif
 @endsection

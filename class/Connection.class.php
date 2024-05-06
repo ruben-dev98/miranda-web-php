@@ -18,8 +18,18 @@ class Connection extends mysqli {
         $stmt->execute();
         
         $result = $stmt->get_result();
-        $row = $result->fetch_assoc();
+        $row = $result->fetch_all(MYSQLI_ASSOC);
         $stmt->close();
         return $row;
+    }
+
+    public static function executeQueryInsert($conn, $query, $params, $paramsType) {
+        $stmt = $conn->prepare($query);
+        $stmt->bind_param($paramsType, ...$params);
+        $stmt->execute();
+        
+        $result = $stmt->get_result();
+        $stmt->close();
+        return $result;
     }
 }

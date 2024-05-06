@@ -5,6 +5,7 @@
     require_once(__DIR__.'/queries.php');
     require_once(__DIR__.'/formControl.php');
     require_once(__DIR__.'/blade/formatData.php');
+    require_once(__DIR__.'/validation.php');
 
     use eftec\bladeone\BladeOne;
 

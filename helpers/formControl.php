@@ -9,7 +9,7 @@
         $form = [];
         
         foreach($_POST as $key => $value) {
-            $form[$key] = $value;
+            $form[] = $value;
         }
         
         return $form;
