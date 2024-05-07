@@ -8,16 +8,15 @@
     $insertSuccessfully = false;
     
     $formBooking = formControl();
-    
     if($formBooking !== null) {
-        if($check_in === null) {
-            $roomIsAvailable = Connection::executeQueryWithParams($conn, $queryOneRoomCheckAvailability, [$check_out, $check_in, $id], 'ssi');
-        }
+        $roomIsAvailable = Connection::executeQueryWithParams($conn, $queryOneRoomCheckAvailability, [$_POST['check_in'], $_POST['check_out'], $id], 'ssi');
         
         if(count($roomIsAvailable) > 0) {
-            $insertSuccessfully = Connection::executeQueryInsert($conn, $queryInsertBooking, $formBooking, 'ssssssi');
+            $insertSuccessfully = Connection::executeQueryInsert($conn, $queryInsertBooking, $formBooking, 'ddssssi');
         }
     }
+
+
 
     $room = Connection::executeQueryWithParams($conn, $queryOneRoom, [$id], 'i')[0];
     $roomFormat = formatRoom($room);

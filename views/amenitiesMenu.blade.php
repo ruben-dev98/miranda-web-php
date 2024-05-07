@@ -1,4 +1,4 @@
-@if ($title === 'Home')
+@if ($title)
     <menu class="rooms__menu">
 @else
     <menu class="rooms__grid-item-menu rooms__menu offers__menu">

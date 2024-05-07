@@ -19,7 +19,7 @@
                             <img class="rooms__list-item-img" src="{{ $room['photo'] }}" alt="">
                             <div class="rooms__list-content">
                                 <div class="rooms__list-item-details">
-                                    @component('amenitiesMenu', ['room' => $room])
+                                    @component('amenitiesMenu', ['room' => $room, 'title' => false])
                                     @endcomponent
                                     <p class="rooms__list-item-details-title">
                                         {{ $room['type_name'] }}

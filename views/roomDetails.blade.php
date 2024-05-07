@@ -94,7 +94,7 @@
                 @foreach ($rooms as $room)
                     <div class="offers__swiper-slide rooms__grid-item swiper-slide">
                         <img src="{{ $room['photo'] }}" alt="">
-                        @component('amenitiesMenu', ['room' => $room])
+                        @component('amenitiesMenu', ['room' => $room, 'title' => false])
                         @endcomponent
                         <div class="rooms__grid-item-details offers__details">
                             <p class="rooms__grid-item-details-title">{{ $room['type_name'] }}</p>
@@ -121,12 +121,13 @@
         </div>
     </section>
     @if ($formBooking !== null)
+        {{ $formBooking[0] }}
         @if ($operationSuccessful)
             @component('swal', [
                 'title' => '¡Thank you for your request!',
                 'text' => 'We have received it correctly. Someone from our Team will get back to you very soon.
                         <br>The Miranda Hotel',
-                'icon' => 'error',
+                'icon' => 'success',
             ])
             @endcomponent
         @else

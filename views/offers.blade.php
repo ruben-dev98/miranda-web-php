@@ -37,7 +37,7 @@
                             {{ $room['description'] }}
                         </p>
                         <section class="offers__amenities">
-                            @component('amenitiesDetails', ['room' => $room])
+                            @component('amenitiesDetails', ['room' => $room, 'title' => true])
                             @endcomponent
                         </section>
                         <button class="offers__button upper__case"><a href="room-details.php?id={{ $room['id'] }}">Book
@@ -55,7 +55,7 @@
                 @foreach ($popularRooms as $room)
                     <div class="offers__swiper-slide rooms__grid-item swiper-slide">
                         <img src="{{ $room['photo'] }}" alt="">
-                        @component('amenitiesMenu', ['room' => $room])
+                        @component('amenitiesMenu', ['room' => $room, 'title' => false])
                         @endcomponent
                         <div class="rooms__grid-item-details offers__details">
                             <p class="rooms__grid-item-details-title">{{ $room['type_name'] }}</p>

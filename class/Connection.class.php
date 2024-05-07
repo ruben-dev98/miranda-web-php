@@ -30,7 +30,7 @@ class Connection extends mysqli {
             $stmt->execute();
             $stmt->close();
             return true;
-        } catch(Exception) {
+        } catch(Exception $e) {
             return false;
         }
     }

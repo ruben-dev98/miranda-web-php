@@ -67,7 +67,7 @@
             <div class="rooms__swiper-wrapper swiper-wrapper">
                 @foreach ($rooms as $room)
                     <div class="rooms__swiper-slide swiper-slide">
-                        @component('amenitiesMenu', ['room' => $room])
+                        @component('amenitiesMenu', ['room' => $room, 'title' => true])
                         @endcomponent
                         <div class="rooms__image" style='background-image: url({{ $room['photo'] }});'>
                         </div>

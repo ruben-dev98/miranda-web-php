@@ -17,7 +17,7 @@
                     <div class="rooms swiper-slide">
                         <div class="rooms__grid-item">
                             <img class="rooms__grid-item-img" src="{{ $room['photo'] }}" alt="">
-                            @component('amenitiesMenu', ['room' => $room])
+                            @component('amenitiesMenu', ['room' => $room, 'title' => false])
                             @endcomponent
                             <div class="rooms__grid-item-details">
                                 <p class="rooms__grid-item-details-title">

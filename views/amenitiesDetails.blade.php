@@ -1,4 +1,4 @@
-@if($title === 'Offers')
+@if($title)
 <ul class="offers__amenities-list room-details__amenities-list">
 @else
 <ul class="room-details__amenities-list">
