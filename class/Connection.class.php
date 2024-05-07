@@ -31,6 +31,7 @@ class Connection extends mysqli {
             $stmt->close();
             return true;
         } catch(Exception $e) {
+            //echo $e->getMessage();
             return false;
         }
     }

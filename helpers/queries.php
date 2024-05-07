@@ -79,11 +79,11 @@ FROM amenity
 LEFT JOIN amenity_room on amenity_id = amenity._id
 RIGHT JOIN room on amenity_room.room_id = room._id
 LEFT JOIN (SELECT json_arrayagg(url) as urls, room_id as id_room FROM photo group by room_id) as photos on photos.id_room = room._id
-WHERE room._id IN (SELECT room._id FROM room 
-LEFT JOIN booking on room._id = booking.room_id 
-WHERE (booking.check_in <= ?) OR (booking.check_out > ?) OR booking._id is null
-group by room._id
-order by number)
+WHERE room._id IN (SELECT room._id FROM room
+LEFT JOIN booking on booking.room_id = room._id WHERE (SELECT count(_id) FROM booking 
+WHERE booking.check_in < ? AND booking.check_out > ?
+AND room_id = room._id group by room_id) IS NULL
+group by room._id)
 GROUP BY room._id;";
 
 $queryInsertMessage = "INSERT INTO message (full_name, phone, email, subject, messages) values (?,?,?,?,?)";
@@ -91,9 +91,8 @@ $queryInsertMessage = "INSERT INTO message (full_name, phone, email, subject, me
 $queryInsertBooking = "INSERT INTO booking (check_in, check_out, full_name, email, phone, special_request, room_id) values (?,?,?,?,?,?,?)";
 
 $queryOneRoomCheckAvailability = "SELECT room._id FROM room
-WHERE room._id IN (SELECT room._id FROM room 
-LEFT JOIN booking on room._id = booking.room_id 
-WHERE (booking.check_in <= ?) OR (booking.check_out > ?) OR booking._id is null AND room._id = ?
-group by room._id
-order by number)
+WHERE room._id IN (SELECT room._id FROM room
+LEFT JOIN booking on booking.room_id = room._id WHERE (SELECT count(_id) FROM booking 
+WHERE (booking.check_in < ? AND booking.check_out > ?) group by room_id) IS NULL AND room._id = ?
+group by room._id)
 GROUP BY room._id;";

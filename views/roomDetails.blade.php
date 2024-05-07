@@ -121,21 +121,22 @@
         </div>
     </section>
     @if ($formBooking !== null)
-        {{ $formBooking[0] }}
         @if ($operationSuccessful)
+        {{ 'SUCCESS' }}
             @component('swal', [
                 'title' => '¡Thank you for your request!',
-                'text' => 'We have received it correctly. Someone from our Team will get back to you very soon.
-                        <br>The Miranda Hotel',
-                'icon' => 'success',
+                'text' => `We have received it correctly. Someone from our Team will get back to you very soon.
+                The Miranda Hotel`,
+                'icon' => 'success'
             ])
             @endcomponent
         @else
+        {{ 'FALLITO' }}
             @component('swal', [
                 'title' => '¡We are sorry!',
-                'text' => 'This room is not available for the dates you need. Please try different dates or try a different room. 
-                        <br>The Miranda Hotel',
-                'icon' => 'success',
+                'text' => 'This room is not available for the dates you need. Please try different dates or try a different room.
+                    The Miranda Hotel',
+                'icon' => 'error'
             ])
             @endcomponent
         @endif

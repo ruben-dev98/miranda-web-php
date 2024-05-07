@@ -5,10 +5,10 @@
     enlace.addEventListener('click', () => {
         Swal.fire({
             title: '{{ $title }}',
-            text: '{{ $text }}',
+            text: `{{ $text }}`,
             icon: '{{ $icon }}',
             showConfirmButton: false,
-            timer: 1500
+            timer: 2500
         });
     });
     enlace.click();
