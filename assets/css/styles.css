@@ -72,12 +72,20 @@
   letter-spacing: 0.15rem;
   background-color: #bead8e;
 }
+.button a {
+  color: #fff;
+  text-decoration: none;
+  padding: 1.5rem 3.5rem;
+}
 .button--transparent {
   background-color: transparent;
   border: 0.15em solid rgba(255, 255, 255, 0.3294117647);
 }
 .button--big {
   width: 17.5em;
+}
+.button__banner a {
+  padding: 1.5rem 2.95rem;
 }
 
 .font__title {

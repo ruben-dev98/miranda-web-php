@@ -12,7 +12,11 @@
     letter-spacing: 0.15rem;
     background-color: $color-secondary;
 
-    
+    & a {
+        color: #fff;
+        text-decoration: none;
+        padding: 1.5rem 3.5rem;
+    }
 
     &--transparent {
         background-color: transparent;
@@ -21,5 +25,11 @@
 
     &--big {
         width: 17.5em;
+    }
+
+    &__banner {
+        a {
+            padding: 1.5rem 2.95rem;
+        }
     }
 }
