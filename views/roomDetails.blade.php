@@ -122,7 +122,6 @@
     </section>
     @if ($formBooking !== null)
         @if ($operationSuccessful)
-        {{ 'SUCCESS' }}
             @component('swal', [
                 'title' => '¡Thank you for your request!',
                 'text' => `We have received it correctly. Someone from our Team will get back to you very soon.
@@ -131,7 +130,6 @@
             ])
             @endcomponent
         @else
-        {{ 'FALLITO' }}
             @component('swal', [
                 'title' => '¡We are sorry!',
                 'text' => 'This room is not available for the dates you need. Please try different dates or try a different room.
