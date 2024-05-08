@@ -122,13 +122,7 @@
     </section>
     @if ($formBooking !== null)
         @if ($operationSuccessful)
-            @component('swal', [
-                'title' => '¡Thank you for your request!',
-                'text' => `We have received it correctly. Someone from our Team will get back to you very soon.
-                The Miranda Hotel`,
-                'icon' => 'success'
-            ])
-            @endcomponent
+            {{ header( 'Location: /index.php?success=1&rooms=1 ') }}
         @else
             @component('swal', [
                 'title' => '¡We are sorry!',
@@ -137,6 +131,7 @@
                 'icon' => 'error'
             ])
             @endcomponent
+            {{ header( 'Refresh: 1') }}
         @endif
     @endif
 @endsection

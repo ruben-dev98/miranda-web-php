@@ -86,11 +86,11 @@
     </section>
     @if ($formContact !== null)
         @if($operationSuccessful)
-            @component('swal', ['title' => 'Your data was sent successfully', 'text' => 'Thanks for your time', 'icon' => 'success'])
-            @endcomponent
+            {{ header( 'Location: /index.php?success=1&rooms=0 ') }}
         @else
             @component('swal', ['title' => 'Your data has some errors', 'text' => 'Incorrect data', 'icon' => 'error'])
             @endcomponent
+            {{ header( 'Refresh: 1') }}
         @endif
     @endif
 @endsection

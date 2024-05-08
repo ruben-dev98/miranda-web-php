@@ -327,4 +327,21 @@
             </article>
         </div>
     </section>
+    @if ($success === '1')
+        @if ($redirection === '1')
+            @component('swal', [
+                'title' => '¡Thank you for your request!',
+                'text' => 'We have received it correctly. Someone from our Team will get back to you very soon. The Miranda Hotel',
+                'icon' => 'success',
+            ])
+            @endcomponent
+        @else
+            @component('swal', [
+                'title' => 'Your message was sent successfully',
+                'text' => 'Thanks for your time',
+                'icon' => 'success',
+            ])
+            @endcomponent
+        @endif
+    @endif
 @endsection

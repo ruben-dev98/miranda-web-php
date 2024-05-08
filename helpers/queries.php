@@ -93,6 +93,6 @@ $queryInsertBooking = "INSERT INTO booking (check_in, check_out, full_name, emai
 $queryOneRoomCheckAvailability = "SELECT room._id FROM room
 WHERE room._id IN (SELECT room._id FROM room
 LEFT JOIN booking on booking.room_id = room._id WHERE (SELECT count(_id) FROM booking 
-WHERE (booking.check_in < ? AND booking.check_out > ?) group by room_id) IS NULL AND room._id = ?
+WHERE (booking.check_in < ? AND booking.check_out > ?) AND room_id = ? group by room_id) IS NULL AND room._id = ?
 group by room._id)
 GROUP BY room._id;";

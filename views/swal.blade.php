@@ -3,9 +3,9 @@
 <script defer>
     Swal.fire({
         title: '{{ $title }}',
-        text: `{{ $text }}`,
+        text: '{{ $text }}',
         icon: '{{ $icon }}',
         showConfirmButton: false,
         timer: 2500
-    });
+    })
 </script>
