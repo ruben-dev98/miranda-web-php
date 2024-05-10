@@ -13,7 +13,7 @@
     $formBooking = formControl();
     
     if($formBooking !== null) {
-        $roomIsAvailable = Connection::executeQueryWithParams($conn, $queryOneRoomCheckAvailability, [$_POST['check_out'], $_POST['check_in'], $id, $id], 'ssii');
+        $roomIsAvailable = Connection::executeQueryWithParams($conn, $queryOneRoomCheckAvailability, [$formBooking[1], $formBooking[0], $id, $id], 'ssii');
         if(count($roomIsAvailable) > 0) {
             $insertSuccessfully = Connection::executeQueryInsert($conn, $queryInsertBooking, $formBooking, 'ssssssi');
         }
