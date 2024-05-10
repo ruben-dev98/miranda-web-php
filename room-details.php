@@ -27,6 +27,10 @@
     
     $conn->close();
 
+    if($insertSuccessfully) {
+        header( 'Location: /index.php?success=1&rooms=1 ');
+    }
+
     $templateName = 'roomDetails';
     $values = ['rooms' => $formatRooms, 'room' => $roomFormat, 'check_in' => $check_in, 'check_out' => $check_out, 'formBooking' => $formBooking, 'operationSuccessful' => $insertSuccessfully];
     renderTemplate('roomDetails', $values);

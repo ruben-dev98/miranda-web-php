@@ -85,9 +85,7 @@
         </form>
     </section>
     @if ($formContact !== null)
-        @if($operationSuccessful)
-            {{ header( 'Location: /index.php?success=1&rooms=0 ') }}
-        @else
+        @if(!$operationSuccessful)
             @component('swal', ['title' => 'Your data has some errors', 'text' => 'Incorrect data', 'icon' => 'error'])
             @endcomponent
             {{ header( 'Refresh: 1') }}

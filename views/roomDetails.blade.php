@@ -121,9 +121,7 @@
         </div>
     </section>
     @if ($formBooking !== null)
-        @if ($operationSuccessful)
-            {{ header( 'Location: /index.php?success=1&rooms=1 ') }}
-        @else
+        @if (!$operationSuccessful)
             @component('swal', [
                 'title' => '¡We are sorry!',
                 'text' => 'This room is not available for the dates you need. Please try different dates or try a different room.
